@@ -1,0 +1,25 @@
+
+<h2>Arithmetic Measures</h2>
+<p>These examples show how to configure visual components like column charts or headlines to show data calculated on demand with defined arithmetical operations.</p>
+<p>Any arithmetic measure is built on top of two measures and given arithmetic operation between them. The base measures can be of any type (including the complex measures, such as <a href="/time-over-time-comparison">Time Over Time Comparison </a> or even another Arithmetic Measure).</p>
+<hr className="separator" />
+
+<h3>Ratio</h3>
+<p>Take two measures and divide them (e.g. gross margin = gross profit / net sales).</p>
+<app-arithmetic-measures-ratio></app-arithmetic-measures-ratio>
+
+<h3>Change</h3>
+<p>Calculate percentual change between two measures.</p>
+<p>Note: This example shows how it is possible to use Time Over Time Comparison with Arithmetic Measures to display trend of the given metric.</p>
+<app-arithmetic-measures-change></app-arithmetic-measures-change>
+
+<h3>Sum and difference</h3>
+<p>Add or subtract two measures (e.g. revenue in 2017 - revenue in 2016).</p>
+<app-arithmetic-measures-sum></app-arithmetic-measures-sum>
+
+<h3>Multiplication</h3>
+<p>Multiply two measures (e.g. price per unit x volume = revenue).</p>
+<app-arithmetic-measures-multiplication></app-arithmetic-measures-multiplication>
+
+<h3>Arithmetic Measures with Drilling</h3>
+<app-arithmetic-measure-drilling></app-arithmetic-measure-drilling>
