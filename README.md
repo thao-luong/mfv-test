@@ -1,8 +1,8 @@
-# UiSdkAngularExamples
+# GoodData UI SDK on Angular 2+ app 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
-## Run Angular app Locally
+## Run app Locally
 To run *GoodData.UI Angular Examples* locally:
 ```bash
 git clone <this-repository>
@@ -12,10 +12,6 @@ npm install angular/cli
 npm start
 ```
 Then open https://localhost:4200 and login using Gooddata account 
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
