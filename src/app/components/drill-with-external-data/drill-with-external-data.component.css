@@ -1,0 +1,66 @@
+.states {
+    height: 50px;
+    width: 600px;
+    float: left;
+    display: block;
+    margin-top: 10px;
+}
+
+.drill-in-states {
+    height: 300px;
+    width: 400px;
+    float: left;
+    display: block;
+    margin-top: 5px;
+}
+
+.sales {
+    height: 50px;
+    width: 600px;
+    float: right;
+    display: block;
+    margin-top: 10px;
+}
+
+.drill-in-sales {
+    height: 300px;
+    width: 600px;
+    float: right;
+    display: block;
+    margin-top: 5px;
+}
+
+.employees {
+    height: 50px;
+    width: 400px;
+    float: left;
+    display: block;
+    margin-top: 320px;
+}
+
+.drill-in-employees {
+    height: 300px;
+    width: 400px;
+    float: left;
+    display: block;
+    margin-top: 5px;
+}
+
+.employeeProfile {
+    float: right;
+    display: block;
+    margin-top: 320px;
+    margin-right: 320px;
+}
+
+.picture {
+    border-radius: 50%;
+    border: 2px solid #14b2e2;
+    width: 100px;
+    height: 100px;
+}
+
+.text {
+    flex: 1 1 auto;
+    margin-left: 20px;
+}

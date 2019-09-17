@@ -1,0 +1,26 @@
+<div class="states">
+    <h3>States</h3>
+    <div class="drill-in-states" [id]="tableStatesDomID"></div>
+</div>
+<div class="sales">
+    <h3>Sales from {{state}}</h3>
+    <div class="drill-in-sales" [id]="columnSalesDomID"></div>
+</div>
+<div class="employees">
+    <h3>Employees</h3>
+    <div class="drill-in-employees" [id]="tableEmployeesDomID"></div>
+</div>
+<div class="employeeProfile s-employee-profile">
+    <h3>{{employeeName}}</h3>
+    <div>
+        <img class="picture" src='https://randomuser.me/api/portraits/{{gender}}/{{id}}.jpg' alt="" />
+    </div>
+    <div class="text" type="text/css">
+        <p>Date of birth: {{dob}}</p>
+        <p>
+            Place of birth: {{born_city}}, {{born_state}}
+        </p>
+        <p>Phone: {{phone}}</p>
+        <p>Employed since: {{registeredDate}}</p>
+    </div>
+</div>
