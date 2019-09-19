@@ -43,6 +43,7 @@ import { ArithmeticMeasureSumComponent } from './components/ArithmeticMeasureSum
 import { ArithmeticMeasureMultiplicationComponent } from './components/ArithmeticMeasureMultiplication/ArithmeticMeasureMultiplication.component';
 import { ArithmeticMeasureDrillingComponent } from './components/ArithmeticMeasureDrilling/ArithmeticMeasureDrilling.component';
 import { ArithmeticMeasureComponentsComponent } from './routes/ArithmeticMeasureComponents/ArithmeticMeasureComponents.component';
+import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
 
 
 
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
     { path: 'sorting-components', component: SortingComponentsComponent },
     { path: 'time-over-time-comparison', component: TimeOverTimeComparisonComponent },
     { path: 'attribute-filter-components', component: AttributeFilterComponentsComponent },
+    { path: 'drilling-components', component: DrillingComponentsComponent },
     { path: 'visualization-components', component: VisualizationComponentsComponent },
     { path: 'arithmetic-measures-ratio', component: ArithmeticMeasuresRatioComponent },
     { path: 'arithmetic-measures-change', component: ArithmeticMeasureChangeComponent },

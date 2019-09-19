@@ -56,7 +56,7 @@ import { PivotTableComponentsComponent } from './routes/PivotTableComponents/Piv
 import { SortingComponentsComponent } from './routes/SortingComponents/SortingComponents.component';
 import { TimeOverTimeComparisonComponent } from './routes/TimeOverTimeComparison/TimeOverTimeComparison.component';
 import { AttributeFilterComponentsComponent } from './routes/AttributFilterComponents/AttributFilterComponents.component';
-import { TableDrillExampleComponent } from './components/TableDrillExample/TableDrillExample.component'
+import { TableDrillExampleComponent } from './components/TableDrillExample/TableDrillExample.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -69,18 +69,17 @@ import { ArithmeticMeasuresRatioComponent } from './components/ArithmeticMeasure
 import { ArithmeticMeasureSumComponent } from './components/ArithmeticMeasureSum/ArithmeticMeasureSum.component';
 import { ArithmeticMeasureMultiplicationComponent } from './components/ArithmeticMeasureMultiplication/ArithmeticMeasureMultiplication.component';
 import { ArithmeticMeasureDrillingComponent } from './components/ArithmeticMeasureDrilling/ArithmeticMeasureDrilling.component';
-import { PieChartColorMappingComponent } from './components/PieChartColorMapping/PieChartColorMapping.component'
-import { ArithmeticMeasureComponentsComponent } from './routes/ArithmeticMeasureComponents/ArithmeticMeasureComponents.component';;
-import { HeadlineComponent } from './components/headline/headline.component'
+import { PieChartColorMappingComponent } from './components/PieChartColorMapping/PieChartColorMapping.component';
+import { ArithmeticMeasureComponentsComponent } from './routes/ArithmeticMeasureComponents/ArithmeticMeasureComponents.component';
+import { HeadlineComponent } from './components/headline/headline.component';
 import { VisualizationPivotTableByUriComponent } from './visualizations/VisualizationPivotTableByUri/VisualizationPivotTableByUri.component';
-
-
+import { DrillWithExternalDataComponent } from './components/drill-with-external-data/drill-with-external-data.component';
+import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-
         LayoutModule,
         MatToolbarModule,
         MatButtonModule,
@@ -147,10 +146,9 @@ import { VisualizationPivotTableByUriComponent } from './visualizations/Visualiz
         ArithmeticMeasureDrillingComponent,
         PieChartColorMappingComponent,
         ArithmeticMeasureComponentsComponent,
-        HeadlineComponent
-
-
-
+        HeadlineComponent,
+        DrillWithExternalDataComponent,
+        DrillingComponentsComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -162,6 +160,5 @@ import { VisualizationPivotTableByUriComponent } from './visualizations/Visualiz
     ],
     bootstrap: [AppComponent]
 })
-
 
 export class AppModule { }
