@@ -3,21 +3,22 @@ import * as ReactDOM from 'react-dom';
 import * as uuid from 'uuid';
 import * as invariant from 'invariant';
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
-import { projectId, columnVisualizationIdentifier } from "../../../utils/fixtures";
+
+import { projectId, pieVisualizationUri } from "../../../utils/fixtures";
 import { Visualization } from '@gooddata/react-components';
 
-interface VisualizationColumnChartProps {
+interface VisualizationPieChartByUriProps {
   projectId: any;
-  identifier: any;
+  uri: any;
   onLoadingChanged?: (any);
   onError?: (any);
 }
 
 @Component({
-  selector: 'app-visualization-column-chart',
-  template: '<div class="visualization-column-chart" style="height:300px" [id]="rootDomID"></div>',
+  selector: 'app-visualization-pie-chart-by-uri',
+  template: '<div class="visualization-pie-chart-by-uri" style="height:400px" [id]="rootDomID"></div>',
 })
-export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+export class VisualizationPieChartByUriComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   @Input() onLoadingChanged?: (any);
   @Input() onError?: (any);
 
@@ -29,10 +30,10 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     return node;
   }
 
-  protected getProps(): VisualizationColumnChartProps {
+  protected getProps(): VisualizationPieChartByUriProps {
     return {
       projectId: projectId,
-      identifier: columnVisualizationIdentifier,
+      uri: pieVisualizationUri,
       onLoadingChanged: this.onLoadingChanged,
       onError: this.onError,
     };
@@ -65,3 +66,5 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     // ReactDOM.unmountComponentAtNode(this.getRootDomNode())
   }
 }
+
+

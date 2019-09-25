@@ -3,10 +3,11 @@ import * as ReactDOM from 'react-dom';
 import * as uuid from 'uuid';
 import * as invariant from 'invariant';
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
-import { projectId, columnVisualizationIdentifier } from "../../../utils/fixtures";
+
+import { projectId, heatmapVisualizationIdentifier } from "../../../utils/fixtures";
 import { Visualization } from '@gooddata/react-components';
 
-interface VisualizationColumnChartProps {
+interface VisualizationHeatmapByIdentifierProps {
   projectId: any;
   identifier: any;
   onLoadingChanged?: (any);
@@ -14,10 +15,11 @@ interface VisualizationColumnChartProps {
 }
 
 @Component({
-  selector: 'app-visualization-column-chart',
-  template: '<div class="visualization-column-chart" style="height:300px" [id]="rootDomID"></div>',
+  selector: 'app-visualization-heatmap-by-identifier',
+  template: '<div class="visualization-heatmap-by-identifier" style="height:400px" [id]="rootDomID"></div>',
 })
-export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+export class VisualizationHeatmapByIdentifierComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+  @Input() uri: any;
   @Input() onLoadingChanged?: (any);
   @Input() onError?: (any);
 
@@ -29,10 +31,10 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     return node;
   }
 
-  protected getProps(): VisualizationColumnChartProps {
+  protected getProps(): VisualizationHeatmapByIdentifierProps {
     return {
       projectId: projectId,
-      identifier: columnVisualizationIdentifier,
+      identifier: heatmapVisualizationIdentifier,
       onLoadingChanged: this.onLoadingChanged,
       onError: this.onError,
     };
@@ -65,3 +67,5 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     // ReactDOM.unmountComponentAtNode(this.getRootDomNode())
   }
 }
+
+

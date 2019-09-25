@@ -19,7 +19,6 @@ interface VisualizationColumnChartByUriProps {
   template: '<div class="visualization-column-chart-by-uri" style="height:300px" [id]="rootDomID"></div>',
 })
 export class VisualizationColumnChartByUriComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
-  @Input() projectId: any;
   @Input() uri: any;
   @Input() onLoadingChanged?: (any);
   @Input() onError?: (any);

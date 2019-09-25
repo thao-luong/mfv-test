@@ -3,21 +3,23 @@ import * as ReactDOM from 'react-dom';
 import * as uuid from 'uuid';
 import * as invariant from 'invariant';
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
-import { projectId, columnVisualizationIdentifier } from "../../../utils/fixtures";
+
+import { projectId, scatterVisualizationUri } from "../../../utils/fixtures";
 import { Visualization } from '@gooddata/react-components';
 
-interface VisualizationColumnChartProps {
+interface VisualizationScatterPlotByUriProps {
   projectId: any;
-  identifier: any;
+  uri: any;
   onLoadingChanged?: (any);
   onError?: (any);
 }
 
 @Component({
-  selector: 'app-visualization-column-chart',
-  template: '<div class="visualization-column-chart" style="height:300px" [id]="rootDomID"></div>',
+  selector: 'app-visualization-scatter-chart-by-uri',
+  template: '<div class="visualization-scatter-chart-by-uri" style="height:500px" [id]="rootDomID"></div>',
 })
-export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+export class VisualizationScatterPlotByUriComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+  @Input() uri: any;
   @Input() onLoadingChanged?: (any);
   @Input() onError?: (any);
 
@@ -29,10 +31,10 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     return node;
   }
 
-  protected getProps(): VisualizationColumnChartProps {
+  protected getProps(): VisualizationScatterPlotByUriProps {
     return {
       projectId: projectId,
-      identifier: columnVisualizationIdentifier,
+      uri: scatterVisualizationUri,
       onLoadingChanged: this.onLoadingChanged,
       onError: this.onError,
     };
@@ -65,3 +67,4 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     // ReactDOM.unmountComponentAtNode(this.getRootDomNode())
   }
 }
+

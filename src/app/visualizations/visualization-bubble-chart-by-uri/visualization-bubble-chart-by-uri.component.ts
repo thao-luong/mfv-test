@@ -3,21 +3,23 @@ import * as ReactDOM from 'react-dom';
 import * as uuid from 'uuid';
 import * as invariant from 'invariant';
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
-import { projectId, columnVisualizationIdentifier } from "../../../utils/fixtures";
+
+import { projectId, bubbleVisualizationUri } from "../../../utils/fixtures";
 import { Visualization } from '@gooddata/react-components';
 
-interface VisualizationColumnChartProps {
+interface VisualizationBubbleChartByUriProps {
   projectId: any;
-  identifier: any;
+  uri: any;
   onLoadingChanged?: (any);
   onError?: (any);
 }
 
 @Component({
-  selector: 'app-visualization-column-chart',
-  template: '<div class="visualization-column-chart" style="height:300px" [id]="rootDomID"></div>',
+  selector: 'app-visualization-bubble-chart-by-uri',
+  template: '<div class="visualization-bubble-chart-by-uri" style="height:500px" [id]="rootDomID"></div>',
 })
-export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+export class VisualizationBubbleChartByUriComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
+  @Input() uri: any;
   @Input() onLoadingChanged?: (any);
   @Input() onError?: (any);
 
@@ -29,10 +31,10 @@ export class VisualizationColumnChartComponent implements OnInit, OnDestroy, OnC
     return node;
   }
 
-  protected getProps(): VisualizationColumnChartProps {
+  protected getProps(): VisualizationBubbleChartByUriProps {
     return {
       projectId: projectId,
-      identifier: columnVisualizationIdentifier,
+      uri: bubbleVisualizationUri,
       onLoadingChanged: this.onLoadingChanged,
       onError: this.onError,
     };
