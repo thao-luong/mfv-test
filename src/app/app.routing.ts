@@ -44,6 +44,7 @@ import { ArithmeticMeasureMultiplicationComponent } from './components/Arithmeti
 import { ArithmeticMeasureDrillingComponent } from './components/ArithmeticMeasureDrilling/ArithmeticMeasureDrilling.component';
 import { ArithmeticMeasureComponentsComponent } from './routes/ArithmeticMeasureComponents/ArithmeticMeasureComponents.component';
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
+import { PivotTableDrillExampleComponent } from './components/pivot-table-drill-example/pivot-table-drill-example.component';
 
 
 
@@ -94,6 +95,7 @@ const appRoutes: Routes = [
     { path: 'arithmetic-measures-multiplication', component: ArithmeticMeasureMultiplicationComponent },
     { path: 'arithmetic-measures-drilling', component: ArithmeticMeasureDrillingComponent },
     { path: 'arithmetic-measure-components', component: ArithmeticMeasureComponentsComponent },
+    { path: 'pivot-table-drill-example', component: PivotTableDrillExampleComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

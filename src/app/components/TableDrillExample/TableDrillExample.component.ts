@@ -3,8 +3,8 @@ import * as ReactDOM from 'react-dom';
 import * as uuid from 'uuid';
 import * as invariant from 'invariant';
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
-import '@gooddata/react-components/styles/css/main.css';
 import { Table, Model, HeaderPredicateFactory } from '@gooddata/react-components';
+import '@gooddata/react-components/styles/css/main.css';
 import {
   projectId,
   locationStateDisplayFormIdentifier,
@@ -35,7 +35,6 @@ interface TableDrillExampleProps {
   template: '<div class="table-drill-example" style="height:500px" [id]="rootDomID"></div>',
 })
 export class TableDrillExampleComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
-  @Input() projectId: any;
   @Input() filters: any[];
   @Input() sortBy: any[];
 
@@ -83,12 +82,24 @@ export class TableDrillExampleComponent implements OnInit, OnDestroy, OnChanges,
   ];
 
   xSortBy = [Model.attributeSortItem("menu", "asc")]
-  xDrillableItems = [
+  onDrill = drillEvent => {
+    console.log(
+      "onFiredDrillEvent",
+      drillEvent,
+      JSON.stringify(drillEvent.drillContext.intersection, null, 2),
+    );
+    return true;
+  };
+  renderDrillValue() {
+    let drillEvent;
+    if (!drillEvent) {
+      return null;
+    }
+  };
+  drillableItems = [
     HeaderPredicateFactory.identifierMatch(menuCategoryAttributeDFIdentifier),
     HeaderPredicateFactory.identifierMatch(franchiseFeesIdentifier),
   ];
-  onFiredDrillEvent = (data) => { console.log(data.executionContext); console.log(data.drillContext); }
-
   public rootDomID: string;
 
   protected getRootDomNode() {
@@ -105,8 +116,8 @@ export class TableDrillExampleComponent implements OnInit, OnDestroy, OnChanges,
       totals: this.xTotals,
       filters: this.filters,
       sortBy: this.xSortBy,
-      drillableItems: this.xDrillableItems,
-      onFiredDrillEvent: this.onFiredDrillEvent,
+      drillableItems: this.drillableItems,
+      onFiredDrillEvent: this.onDrill
     };
   }
 
