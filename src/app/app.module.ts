@@ -75,7 +75,7 @@ import { HeadlineComponent } from './components/headline/headline.component';
 import { VisualizationPivotTableByUriComponent } from './visualizations/VisualizationPivotTableByUri/VisualizationPivotTableByUri.component';
 import { DrillWithExternalDataComponent } from './components/drill-with-external-data/drill-with-external-data.component';
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
-
+import { PivotTableDrillExampleComponent } from './components/pivot-table-drill-example/pivot-table-drill-example.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -148,6 +148,7 @@ import { DrillingComponentsComponent } from './routes/drilling-components/drilli
         ArithmeticMeasureComponentsComponent,
         HeadlineComponent,
         DrillWithExternalDataComponent,
+        PivotTableDrillExampleComponent,
         DrillingComponentsComponent
     ],
     providers: [

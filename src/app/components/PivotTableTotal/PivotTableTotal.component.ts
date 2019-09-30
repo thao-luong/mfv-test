@@ -54,8 +54,8 @@ export class PivotTableTotalsComponent implements OnInit, OnDestroy, OnChanges, 
   ]
   xRows = [
     Model.attribute(locationStateDisplayFormIdentifier).localIdentifier("state"),
-    Model.attribute(locationNameDisplayFormIdentifier),
-    Model.attribute(menuCategoryAttributeDFIdentifier),
+    Model.attribute(locationNameDisplayFormIdentifier).localIdentifier("name"),
+    Model.attribute(menuCategoryAttributeDFIdentifier).localIdentifier("menu"),
   ]
   xColumns = [Model.attribute(quarterDateIdentifier), Model.attribute(monthDateIdentifier)]
 
@@ -81,6 +81,41 @@ export class PivotTableTotalsComponent implements OnInit, OnDestroy, OnChanges, 
       measureIdentifier: "franchiseFeesIdentifier",
       type: "max",
       attributeIdentifier: "state",
+    },
+    {
+      measureIdentifier: "franchiseFeesIdentifier",
+      type: "sum",
+      attributeIdentifier: "name",
+    },
+    {
+      measureIdentifier: "franchiseFeesIdentifier",
+      type: "avg",
+      attributeIdentifier: "name",
+    },
+    {
+      measureIdentifier: "franchiseFeesAdRoyaltyIdentifier",
+      type: "sum",
+      attributeIdentifier: "name",
+    },
+    {
+      measureIdentifier: "franchiseFeesIdentifier",
+      type: "sum",
+      attributeIdentifier: "menu",
+    },
+    {
+      measureIdentifier: "franchiseFeesIdentifier",
+      type: "avg",
+      attributeIdentifier: "menu",
+    },
+    {
+      measureIdentifier: "franchiseFeesAdRoyaltyIdentifier",
+      type: "nat",
+      attributeIdentifier: "menu",
+    },
+    {
+      measureIdentifier: "franchiseFeesIdentifier",
+      type: "med",
+      attributeIdentifier: "menu",
     },
   ];
 
