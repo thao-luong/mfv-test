@@ -13,6 +13,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AlertComponent } from './components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { MyNavComponent } from './my-nav/my-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
@@ -57,13 +64,6 @@ import { SortingComponentsComponent } from './routes/SortingComponents/SortingCo
 import { TimeOverTimeComparisonComponent } from './routes/TimeOverTimeComparison/TimeOverTimeComparison.component';
 import { AttributeFilterComponentsComponent } from './routes/AttributFilterComponents/AttributFilterComponents.component';
 import { TableDrillExampleComponent } from './components/TableDrillExample/TableDrillExample.component';
-import { MyNavComponent } from './my-nav/my-nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { ArithmeticMeasureChangeComponent } from './components/ArithmeticMeasureChange/ArithmeticMeasureChange.component';
 import { ArithmeticMeasuresRatioComponent } from './components/ArithmeticMeasureRatio/ArithmeticMeasureRatio.component';
 import { ArithmeticMeasureSumComponent } from './components/ArithmeticMeasureSum/ArithmeticMeasureSum.component';
@@ -76,6 +76,18 @@ import { VisualizationPivotTableByUriComponent } from './visualizations/Visualiz
 import { DrillWithExternalDataComponent } from './components/drill-with-external-data/drill-with-external-data.component';
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
 import { PivotTableDrillExampleComponent } from './components/pivot-table-drill-example/pivot-table-drill-example.component';
+import { VisualizationHeadlineByUriComponent } from './visualizations/visualization-headline-by-uri/visualization-headline-by-uri.component';
+import { VisualizationScatterPlotByUriComponent } from './visualizations/visualization-scatter-plot-by-uri/visualization-scatter-plot-by-uri.component';
+import { VisualizationBubbleChartByUriComponent } from './visualizations/visualization-bubble-chart-by-uri/visualization-bubble-chart-by-uri.component';
+import { VisualizationTreemapByIdentifierComponent } from './visualizations/visualization-treemap-by-identifier/visualization-treemap-by-identifier.component';
+import { VisualizationHeatmapByIdentifierComponent } from './visualizations/visualization-heatmap-by-identifier/visualization-heatmap-by-identifier.component';
+import { VisualizationDonutChartByIdentifierComponent } from './visualizations/visualization-donut-chart-by-identifier/visualization-donut-chart-by-identifier.component';
+import { VisualizationPieChartByIdentifierComponent } from './visualizations/visualization-pie-chart-by-identifier/visualization-pie-chart-by-identifier.component';
+import { VisualizationDonutChartByUriComponent } from './visualizations/visualization-donut-chart-by-uri/visualization-donut-chart-by-uri.component';
+import { VisualizationPieChartByUriComponent } from './visualizations/visualization-pie-chart-by-uri/visualization-pie-chart-by-uri.component'
+
+
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -148,8 +160,18 @@ import { PivotTableDrillExampleComponent } from './components/pivot-table-drill-
         ArithmeticMeasureComponentsComponent,
         HeadlineComponent,
         DrillWithExternalDataComponent,
+        DrillingComponentsComponent,
         PivotTableDrillExampleComponent,
-        DrillingComponentsComponent
+        VisualizationHeadlineByUriComponent,
+        VisualizationScatterPlotByUriComponent,
+        VisualizationBubbleChartByUriComponent,
+        VisualizationTreemapByIdentifierComponent,
+        VisualizationHeatmapByIdentifierComponent ,
+        VisualizationDonutChartByIdentifierComponent ,
+        VisualizationPieChartByIdentifierComponent ,
+        VisualizationDonutChartByUriComponent,
+        VisualizationPieChartByUriComponent
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
