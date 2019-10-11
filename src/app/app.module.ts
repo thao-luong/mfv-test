@@ -24,55 +24,54 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { KpiComponent } from './components/kpi/kpi.component';
-import { PivotTableComponent } from './components/PivotTable/PivotTable.component';
-import { PieChartComponent } from './components/PieChart/PieChart.component';
-import { BarChartComponent } from './components/BarChart/BarChart.component';
-import { ColumnChartComponent } from './components/ColumnChart/ColumnChart.component';
-import { LineChartComponent } from './components/LineChart/LineChart.component';
-import { LineChartHasSegmentByComponent } from './components/LineChartHasSegmenyBy/LineChartHasSegmenyBy.component';
-import { AreaChartComponent } from './components/AreaChart/AreaChart.component';
-import { AreaChart2Component } from './components/AreaChartHasColorPalette/AreaChartHasColorPalette.component';
-import { ComboChartComponent } from './components/ComboChart/ComboChart.component';
-import { HeatMapComponent } from './components/HeatMap/HeatMap.component';
-import { DonutChartComponent } from './components/DonutChart/DonutChart.component';
-import { TreemapComponent } from './components/TreeMap/TreeMap.component';
-import { BubbleChartComponent } from './components/BubbleChart/BubbleChart.component';
-import { ScatterPlotComponent } from './components/ScatterChart/ScatterChart.component';
-import { DualColumnChartComponent } from './components/DualColumnChart/DualColumnChart.component';
+import { PivotTableComponent } from './components/pivot-table/pivot-table.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ColumnChartComponent } from './components/column-chart/column-chart.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { LineChartHasSegmentByComponent } from './components/line-chart-has-segmeny-by/line-chart-has-segmeny-by.component';
+import { AreaChartComponent } from './components/area-chart/area-chart.component';
+import { ComboChartComponent } from './components/combo-chart/combo-chart.component';
+import { HeatMapComponent } from './components/heat-map/heat-map.component';
+import { DonutChartComponent } from './components/donut-chart/donut-chart.component';
+import { TreemapComponent } from './components/tree-map/tree-map.component';
+import { BubbleChartComponent } from './components/bubble-chart/bubble-chart.component';
+import { ScatterPlotComponent } from './components/scatter-chart/scatter-chart.component';
+import { DualColumnChartComponent } from './components/dual-column-chart/dual-column-chart.component';
 import { TableComponent } from './components/table/table.component';
-import { PivotTableTotalsComponent } from './components/PivotTableTotal/PivotTableTotal.component';
-import { VisualizationAreaChartComponent } from './visualizations/VisualizationAreaChart/VisualizationAreaChart.component';
-import { VisualizationAreaChartByUriComponent } from './visualizations/VisualizationAreaChartByUri/VisualizationAreaChartByUri.component';
-import { VisualizationPivotTableComponent } from './visualizations/VisualizationPivotTable/VisualizationPivotTable.component';
-import { VisualizationColumnChartByUriComponent } from './visualizations/VisualizationColumnChartByUri/VisualizationColumnChartByUri.component';
-import { VisualizationColumnChartComponent } from './visualizations/VisualizationColumnChart/VisualizationColumnChart.component';
-import { VisualizationBarChartComponent } from './visualizations/VisualizationBarChart/VisualizationBarChart.component';
-import { VisualizationBarChartByUriComponent } from './visualizations/VisualizationBarChartByUri/VisualizationBarChartByUri.component';
-import { VisualizationLineChartComponent } from './visualizations/VisualizationLineChart/VisualizationLineChart.component';
-import { VisualizationLineChartByUriComponent } from './visualizations/VisualizationLineChartByUri/VisualizationLineChartByUri.component';
-import { MeasureSortingExampleComponent } from './components/MeasureSortingExample/MeasureSortingExample.component';
-import { AttributeSortingExampleComponent } from './components/AttributeSortingExample/AttributeSortingExample.component';
-import { SamePeriodColumnChartExampleComponent } from './components/SamePeriodColumnChartExample/SamePeriodColumnChartExample.component';
-import { PreviousPeriodColumnChartExampleComponent } from './components/PreviousPeriodColumnChartExample/PreviousPeriodColumnChartExample.component';
-import { PreviousPeriodHeadLineExampleComponent } from './components/PreviousPeriodHeadlineExample/PreviousPeriodHeadlineExample.component';
-import { AttributeFilterExampleComponent } from './components/AttributeFilterExample/AttributeFilterExample.component';
-import { AttributeFilterComponent } from './components/AttributeFilter/AttributeFilter.component';
-import { BasicComponentsComponent } from './routes/BasicComponents/BasicComponents.component';
-import { VisualizationComponentsComponent } from './routes/VisualizationComponents/VisualizationComponents.component';
-import { PivotTableComponentsComponent } from './routes/PivotTableComponents/PivotTableComponents.component';
-import { SortingComponentsComponent } from './routes/SortingComponents/SortingComponents.component';
-import { TimeOverTimeComparisonComponent } from './routes/TimeOverTimeComparison/TimeOverTimeComparison.component';
-import { AttributeFilterComponentsComponent } from './routes/AttributFilterComponents/AttributFilterComponents.component';
-import { TableDrillExampleComponent } from './components/TableDrillExample/TableDrillExample.component';
-import { ArithmeticMeasureChangeComponent } from './components/ArithmeticMeasureChange/ArithmeticMeasureChange.component';
-import { ArithmeticMeasuresRatioComponent } from './components/ArithmeticMeasureRatio/ArithmeticMeasureRatio.component';
-import { ArithmeticMeasureSumComponent } from './components/ArithmeticMeasureSum/ArithmeticMeasureSum.component';
-import { ArithmeticMeasureMultiplicationComponent } from './components/ArithmeticMeasureMultiplication/ArithmeticMeasureMultiplication.component';
-import { ArithmeticMeasureDrillingComponent } from './components/ArithmeticMeasureDrilling/ArithmeticMeasureDrilling.component';
-import { PieChartColorMappingComponent } from './components/PieChartColorMapping/PieChartColorMapping.component';
-import { ArithmeticMeasureComponentsComponent } from './routes/ArithmeticMeasureComponents/ArithmeticMeasureComponents.component';
-import { HeadlineComponent } from './components/headline/headline.component';
-import { VisualizationPivotTableByUriComponent } from './visualizations/VisualizationPivotTableByUri/VisualizationPivotTableByUri.component';
+import { PivotTableTotalsComponent } from './components/pivot-table-total/pivot-table-total.component';
+import { VisualizationAreaChartComponent } from './visualizations/visualization-area-chart/visualization-area-chart.component';
+import { VisualizationAreaChartByUriComponent } from './visualizations/visualization-area-chart-by-uri/visualization-area-chart-by-uri.component';
+import { VisualizationPivotTableComponent } from './visualizations/visualization-pivot-table/visualization-pivot-table.component';
+import { VisualizationColumnChartByUriComponent } from './visualizations/visualization-column-chart-by-uri/visualization-column-chart-by-uri.component';
+import { VisualizationColumnChartComponent } from './visualizations/visualization-column-chart/visualization-column-chart.component';
+import { VisualizationBarChartComponent } from './visualizations/visualization-bar-chart/visualization-bar-chart.component';
+import { VisualizationBarChartByUriComponent } from './visualizations/visualization-bar-chart-by-uri/visualization-bar-chart-by-uri.component';
+import { VisualizationLineChartComponent } from './visualizations/visualization-line-chart/visualization-line-chart.component';
+import { VisualizationLineChartByUriComponent } from './visualizations/visualization-line-chart-by-uri/visualization-line-chart-by-uri.component';
+import { MeasureSortingExampleComponent } from './components/measure-sorting-example/measure-sorting-example.component';
+import { AttributeSortingExampleComponent } from './components/attribute-sorting-example/attribute-sorting-example.component';
+import { SamePeriodColumnChartExampleComponent } from './components/same-period-column-chart-example/same-period-column-chart-example.component';
+import { PreviousPeriodColumnChartExampleComponent } from './components/previous-period-column-chart-example/previous-period-column-chart-example.component';
+import { PreviousPeriodHeadLineExampleComponent } from './components/previous-period-headline-example/previous-period-headline-example.component';
+import { AttributeFilterExampleComponent } from './components/attribute-filter-example/attribute-filter-example.component';
+import { AttributeFilterComponent } from './components/attribute-filter/attribute-filter.component';
+import { BasicComponentsComponent } from './routes/basic-components/basic-components.component';
+import { VisualizationComponentsComponent } from './routes/visualization-components/visualization-components.component';
+import { PivotTableComponentsComponent } from './routes/pivot-table-components/pivot-table-components.component';
+import { SortingComponentsComponent } from './routes/sorting-components/sorting-components.component';
+import { TimeOverTimeComparisonComponent } from './routes/time-over-time-comparison/time-over-time-comparison.component';
+import { AttributeFilterComponentsComponent } from './routes/attribut-filter-components/attribut-filter-components.component';
+import { TableDrillExampleComponent } from './components/table-drill-example/table-drill-example.component';
+import { ArithmeticMeasureChangeComponent } from './components/arithmetic-measure-change/arithmetic-measure-change.component';
+import { ArithmeticMeasuresRatioComponent } from './components/arithmetic-measure-ratio/arithmetic-measure-ratio.component';
+import { ArithmeticMeasureSumComponent } from './components/arithmetic-measure-sum/arithmetic-measure-sum.component';
+import { ArithmeticMeasureMultiplicationComponent } from './components/arithmetic-measure-multiplication/arithmetic-measure-multiplication.component';
+import { ArithmeticMeasureDrillingComponent } from './components/arithmetic-measure-drilling/arithmetic-measure-drilling.component';
+import { PieChartColorMappingComponent } from './components/pie-chart-color-mapping/pie-chart-color-mapping.component';
+import { ArithmeticMeasureComponentsComponent } from './routes/arithmetic-measure-components/arithmetic-measure-components.component';
+import { HeadlineComponent } from './components/head-line/head-line.component';
+import { VisualizationPivotTableByUriComponent } from './visualizations/visualization-pivot-table-by-uri/visualization-pivot-table-by-uri.component';
 import { DrillWithExternalDataComponent } from './components/drill-with-external-data/drill-with-external-data.component';
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
 import { PivotTableDrillExampleComponent } from './components/pivot-table-drill-example/pivot-table-drill-example.component';
@@ -85,8 +84,7 @@ import { VisualizationDonutChartByIdentifierComponent } from './visualizations/v
 import { VisualizationPieChartByIdentifierComponent } from './visualizations/visualization-pie-chart-by-identifier/visualization-pie-chart-by-identifier.component';
 import { VisualizationDonutChartByUriComponent } from './visualizations/visualization-donut-chart-by-uri/visualization-donut-chart-by-uri.component';
 import { VisualizationPieChartByUriComponent } from './visualizations/visualization-pie-chart-by-uri/visualization-pie-chart-by-uri.component'
-
-
+import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-color-palette/area-chart-has-color-palette.component';
 
 @NgModule({
     imports: [
@@ -117,7 +115,7 @@ import { VisualizationPieChartByUriComponent } from './visualizations/visualizat
         LineChartComponent,
         LineChartHasSegmentByComponent,
         AreaChartComponent,
-        AreaChart2Component,
+        AreaChartHasColorPaletteComponent,
         ComboChartComponent,
         HeatMapComponent,
         DonutChartComponent,
@@ -166,12 +164,11 @@ import { VisualizationPieChartByUriComponent } from './visualizations/visualizat
         VisualizationScatterPlotByUriComponent,
         VisualizationBubbleChartByUriComponent,
         VisualizationTreemapByIdentifierComponent,
-        VisualizationHeatmapByIdentifierComponent ,
-        VisualizationDonutChartByIdentifierComponent ,
-        VisualizationPieChartByIdentifierComponent ,
+        VisualizationHeatmapByIdentifierComponent,
+        VisualizationDonutChartByIdentifierComponent,
+        VisualizationPieChartByIdentifierComponent,
         VisualizationDonutChartByUriComponent,
         VisualizationPieChartByUriComponent
-
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
