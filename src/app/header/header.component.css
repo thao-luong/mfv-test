@@ -1,0 +1,15 @@
+.gd-header-inner {
+    position: relative;
+    max-width: 1000px;
+    color: rgb(148, 161, 173);
+    font-size: 13px;
+    text-align: center;
+    border-radius: 50px;
+    background: rgb(240, 240, 240);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+    width: auto;
+    border: 1px solid;
+    padding: 15px 60px 15px 30px;
+} 

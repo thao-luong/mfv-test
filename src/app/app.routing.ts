@@ -11,6 +11,8 @@ import { AttributeFilterComponentsComponent } from './routes/attribut-filter-com
 import { VisualizationComponentsComponent } from './routes/visualization-components/visualization-components.component';
 import { ArithmeticMeasureComponentsComponent } from './routes/arithmetic-measure-components/arithmetic-measure-components.component';
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -30,4 +32,9 @@ const appRoutes: Routes = [
     { path: '**', redirectTo: '' }
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+// export const routing = RouterModule.forRoot(appRoutes);
+@NgModule({
+    imports: [RouterModule.forChild(appRoutes), CommonModule],
+    exports: [RouterModule],
+})
+export class AppRouting { }

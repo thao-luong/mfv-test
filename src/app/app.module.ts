@@ -8,12 +8,13 @@ import { CookieService } from 'ngx-cookie-service';
 import { fakeBackendProvider } from './_helpers';
 
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { AppRouting } from './app.routing';
+import { HeaderComponent } from './header/header.component';
+import { AppToolbarService } from './app-toolbar/app-toolbar.component'
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AlertComponent } from './components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
-import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -98,7 +99,10 @@ import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-c
         MatListModule,
         ReactiveFormsModule,
         HttpClientModule,
-        routing
+        AppRouting,
+        RouterModule.forRoot([{
+            path: '', redirectTo: '/basic-components', pathMatch: 'full'
+        }])
     ],
     declarations: [
         AppComponent,
@@ -148,7 +152,6 @@ import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-c
         AttributeFilterComponentsComponent,
         TimeOverTimeComparisonComponent,
         TableDrillExampleComponent,
-        MyNavComponent,
         ArithmeticMeasureChangeComponent,
         ArithmeticMeasuresRatioComponent,
         ArithmeticMeasureSumComponent,
@@ -168,13 +171,14 @@ import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-c
         VisualizationDonutChartByIdentifierComponent,
         VisualizationPieChartByIdentifierComponent,
         VisualizationDonutChartByUriComponent,
-        VisualizationPieChartByUriComponent
+        VisualizationPieChartByUriComponent,
+        HeaderComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
         CookieService,
-
+        AppToolbarService,
         // provider used to create fake backend
         fakeBackendProvider
     ],

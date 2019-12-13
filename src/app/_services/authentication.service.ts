@@ -1,11 +1,8 @@
 ﻿import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
 import { environment } from '@environments/environment';
 import { User } from '@app/_models';
-import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({ providedIn: 'root' })
@@ -22,13 +19,13 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    login(username: string, password: string) : Observable<any>{
-        var body = {
-            "postUserLogin":{
-                "login":"tu.bui@gooddata.com",
-                "password":"changeit",
-                "remember":1,
-                "verify_level":0
+    login(username: string, password: string): Observable<any> {
+        const body = {
+            'postUserLogin': {
+                'username': username,
+                'password': password,
+                'remember': 1,
+                'verify_level': 0
             }
         }
 
@@ -36,27 +33,24 @@ export class AuthenticationService {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         });
-        let options = { 
+        let options = {
             headers: headers,
             observe: 'response' as 'body',
             withCredentials: true
         };
 
-        var ret = this.http.post<any>(`${environment.apiUrl}/gdc/account/login`, body, options);        
+        var ret = this.http.post<any>(`${environment.apiUrl}/gdc/account/login`, body, options);
         ret.subscribe(resp => {
             console.log(resp);
             console.log(resp.headers)
             var setCookieHeader = resp.headers.get('Set-Cookie');
             console.log(setCookieHeader)
-            //this.cookieService.set( 'GDCAuthSST', 'Hello World' );
-            //this.cookieService.set( 'GDCAuthTT', 'Hello World' );
             return resp;
         }, err => {
-            console.log("===> Error");
+            console.log('===> Error');
             console.log(err);
         });
         return ret;
-
     }
 
     logout() {

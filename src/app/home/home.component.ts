@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
     users: User[] = [];
+    appName = ' GoodData UI.SDK ';
 
     constructor(
         private authenticationService: AuthenticationService,
@@ -21,15 +22,15 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     }
     ngOnInit() {
-        //this.loadAllUsers();
+        // this.loadAllUsers();
     }
     ngOnDestroy() {
         // unsubscribe to ensure no memory leaks
-        //this.currentUserSubscription.unsubscribe();
+        // this.currentUserSubscription.unsubscribe();
     }
     deleteUser(id: number) {
         this.userService.delete(id).pipe(first()).subscribe(() => {
-            this.loadAllUsers()
+            this.loadAllUsers();
         });
     }
 
