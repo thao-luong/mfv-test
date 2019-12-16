@@ -30,9 +30,9 @@ interface PivotTableBucketProps {
 interface PivotTableProps {
   projectId: any;
   pageSize: number;
-  config: (any),
-  groupRows: boolean,
-  exportTitle: string
+  config: (any);
+  groupRows: boolean;
+  exportTitle: string;
 }
 
 @Component({

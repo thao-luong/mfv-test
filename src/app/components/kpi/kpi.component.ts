@@ -3,10 +3,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as uuid from 'uuid';
 import * as invariant from 'invariant';
-
 import { Component, Input, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
 import { Kpi } from '@gooddata/react-components';
-import { environment } from '../../../environments/environment';
+import {
+  projectId,
+  totalSalesIdentifier
+} from '../../../utils/fixtures.js';
 
 interface KpiProps {
   measure: string;
@@ -23,8 +25,6 @@ interface KpiProps {
 })
 
 export class KpiComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
-  @Input() measure: any;
-  @Input() projectId: string;
   @Input() filters: any[];
   @Input() format: string;
   @Input() onLoadingChanged?: (any);
@@ -39,21 +39,13 @@ export class KpiComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit
   }
 
   protected getProps(): KpiProps {
-    const {
-      projectId,
-      measure,
-      format,
-      filters,
-      onLoadingChanged,
-      onError
-    } = this;
     return {
-      projectId,
-      measure,
-      format,
-      filters,
-      onLoadingChanged,
-      onError
+      projectId: projectId,
+      measure: totalSalesIdentifier,
+      format: this.format,
+      filters: this.filters,
+      onLoadingChanged: this.onLoadingChanged,
+      onError: this.onError
     };
   }
 

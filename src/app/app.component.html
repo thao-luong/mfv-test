@@ -1,30 +1,13 @@
-﻿<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-    </div>
-</nav>
-<router-outlet></router-outlet>
+﻿<router-outlet></router-outlet>
 <!-- main app container -->
 <div class="jumbotron">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
                 <app-home></app-home>
-                <alert></alert>                
+                <alert></alert>
                 <router-outlet></router-outlet>
             </div>
         </div>
     </div>
-</div>
-
-<!-- credits -->
-<div class="text-center" style="text-align: center">
-    <p>
-        <a href="https://sdk.gooddata.com/gooddata-ui/docs/about_gooddataui.html" target="_top">About GoodData UI</a>
-    </p>
-    <p>
-        <a href="https://sdk.gooddata.com/gooddata-ui/docs/ht_use_react_component_in_angular_2.x.html" target="_top">Use Angular 2+</a>
-    </p>
 </div>
