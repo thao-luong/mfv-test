@@ -1,5 +1,4 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AuthGuard } from './_guards';
@@ -15,10 +14,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: '', component: BasicComponentsComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'home', component: HomeComponent },
     { path: 'basic-components', component: BasicComponentsComponent },
     { path: 'pivot-table-components', component: PivotTableComponentsComponent },
     { path: 'sorting-components', component: SortingComponentsComponent },

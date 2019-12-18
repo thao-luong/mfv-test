@@ -1,75 +1,96 @@
+<app-header></app-header>
+<div style="margin-left: 100px;">
+    <mat-sidenav-container style ="background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+            <a mat-list-item [routerLink]="'/basic-components'"> Basic Components </a>
+            <a mat-list-item [routerLink]="'/pivot-table-components'"> Pivot Table </a>
+            <a mat-list-item [routerLink]="'/sorting-components'"> Sorting </a>
+            <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+            <a mat-list-item [routerLink]="'/visualization-components'"> Visualization Components </a>
+            <a mat-list-item [routerLink]="'/drilling-components'"> Drilling </a>
+            <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter </a>
+            <a mat-list-item [routerLink]="'/arithmetic-measure-components'"> Arithmetic Measures </a>
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px;margin-right: 150px;">
+                <router-outlet></router-outlet>               
+                <h2>Basic Components</h2>
+                <p>The following components accept measures and attributes, perform the execution, and render data as a chart, table or KPI.</p>
+                <hr className="separator" />
 
-<h2>Basic Components</h2>
-<p>The following components accept measures and attributes, perform the execution, and render data as a chart, table or KPI.</p>
-<hr className="separator" />
+                <h3>KPI</h3>
+                <app-kpi></app-kpi>
+                <hr className="separator" />
 
-<h3>KPI</h3>
-<app-kpi></app-kpi>
-<hr className="separator" />
+                <h3>Head Line</h3> 
+                <app-head-line></app-head-line>
+                <hr className="separator" />
 
-<h3>Head Line</h3> 
-<app-head-line></app-head-line>
-<hr className="separator" />
+                <h3>Pie chart has 1 measure, 1 attribute</h3>
+                <app-pie-chart></app-pie-chart> 
+                <hr className="separator" />
 
-<h3>Pie chart has 1 measure, 1 attribute</h3>
-<app-pie-chart></app-pie-chart> 
-<hr className="separator" />
+                <h3>Table</h3> 
+                <app-table></app-table>
+                <hr className="separator" /> 
 
-<h3>Table</h3> 
-<app-table></app-table>
-<hr className="separator" /> 
+                <h3>Bar chart has 1 measure, 1 viewBy</h3> 
+                <app-bar-chart></app-bar-chart> 
+                <hr className="separator" />
 
-<h3>Bar chart has 1 measure, 1 viewBy</h3> 
-<app-bar-chart></app-bar-chart> 
-<hr className="separator" />
+                <h3>Column chart has 1 measure, 1 viewBy ans sort by measure</h3> 
+                <app-column-chart></app-column-chart> 
+                <hr className="separator" />
 
-<h3>Column chart has 1 measure, 1 viewBy ans sort by measure</h3> 
-<app-column-chart></app-column-chart> 
-<hr className="separator" />
+                <h3>Line chart</h3> 
+                <app-line-chart></app-line-chart> 
+                <hr className="separator" />
 
-<h3>Line chart</h3> 
-<app-line-chart></app-line-chart> 
-<hr className="separator" />
+                <h3>Line chart has 1 measures, 1 trendBy, 1 SegmentBy</h3> 
+                <app-line-chart-has-segment-by></app-line-chart-has-segment-by> 
+                <hr className="separator" />
 
-<h3>Line chart has 1 measures, 1 trendBy, 1 SegmentBy</h3> 
-<app-line-chart-has-segment-by></app-line-chart-has-segment-by> 
-<hr className="separator" />
+                <h3>Area Chart has StackBy</h3> 
+                <app-area-chart></app-area-chart>
+                <hr className="separator" />
 
-<h3>Area Chart has StackBy</h3> 
-<app-area-chart></app-area-chart>
-<hr className="separator" />
+                <h3>Area Chart has color palette</h3> 
+                <app-area-chart-has-color-palette></app-area-chart-has-color-palette>
+                <hr className="separator" />
 
-<h3>Area Chart has color palette</h3> 
-<app-area-chart-has-color-palette></app-area-chart-has-color-palette>
-<hr className="separator" />
+                <h3>Combo chart</h3> 
+                <app-combo-chart></app-combo-chart>
+                <hr className="separator" />
 
-<h3>Combo chart</h3> 
-<app-combo-chart></app-combo-chart>
-<hr className="separator" />
+                <h3>Heat Map</h3> 
+                <app-heat-map></app-heat-map>
+                <hr className="separator" />
 
-<h3>Heat Map</h3> 
-<app-heat-map></app-heat-map>
-<hr className="separator" />
+                <h3>Tree Map</h3> 
+                <app-tree-map></app-tree-map>
+                <hr className="separator" />
 
-<h3>Tree Map</h3> 
-<app-tree-map></app-tree-map>
-<hr className="separator" />
+                <h3>Donut chart</h3> 
+                <app-donut-chart></app-donut-chart>
+                <hr className="separator" />
 
-<h3>Donut chart</h3> 
-<app-donut-chart></app-donut-chart>
-<hr className="separator" />
+                <h3>Scatter Plot</h3> 
+                <app-scatter-plot></app-scatter-plot>
+                <hr className="separator" />
 
-<h3>Scatter Plot</h3> 
-<app-scatter-plot></app-scatter-plot>
-<hr className="separator" />
+                <h3>Bubble Chart</h3> 
+                <app-bubble-chart></app-bubble-chart>
+                <hr className="separator" />
 
-<h3>Bubble Chart</h3> 
-<app-bubble-chart></app-bubble-chart>
-<hr className="separator" />
+                <h3>Dual Axes Column Chart</h3> 
+                <app-dual-column-chart></app-dual-column-chart>
 
-<h3>Dual Axes Column Chart</h3> 
-<app-dual-column-chart></app-dual-column-chart>
-
-<hr className="separator" />
-<h3>Pie Chart with color mapping</h3> 
-<app-pie-chart-color-mapping></app-pie-chart-color-mapping>
+                <hr className="separator" />
+                <h3>Pie Chart with color mapping</h3> 
+                <app-pie-chart-color-mapping></app-pie-chart-color-mapping>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 

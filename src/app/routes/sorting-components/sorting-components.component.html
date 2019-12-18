@@ -1,12 +1,34 @@
-<h2> Sorting </h2>
-<p>These examples show how to sort bucket components like ColumnChart or Table.</p>
-<hr className="separator" />
+<app-header></app-header>
+<div style="margin-left: 100px;">
+    <mat-sidenav-container style ="background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+            <a mat-list-item [routerLink]="'/basic-components'"> Basic Components </a>
+            <a mat-list-item [routerLink]="'/pivot-table-components'"> Pivot Table </a>
+            <a mat-list-item [routerLink]="'/sorting-components'"> Sorting </a>
+            <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+            <a mat-list-item [routerLink]="'/visualization-components'"> Visualization Components </a>
+            <a mat-list-item [routerLink]="'/drilling-components'"> Drilling </a>
+            <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter </a>
+            <a mat-list-item [routerLink]="'/arithmetic-measure-components'"> Arithmetic Measures </a>
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px;margin-right: 150px;">
+                <router-outlet></router-outlet>               
+                <h2> Sorting </h2>
+                <p>These examples show how to sort bucket components like ColumnChart or Table.</p>
+                <hr className="separator" />
 
 
-<h3>Sorting by Measure.</h3> 
-<p>You can sort data by a measure value with the measureSortItem.</p>
-<app-measure-sorting></app-measure-sorting>
+                <h3>Sorting by Measure.</h3> 
+                <p>You can sort data by a measure value with the measureSortItem.</p>
+                <app-measure-sorting></app-measure-sorting>
 
-<h3>Sorting by Attribute. </h3> 
-<p>You can sort data by an attribute value with the attributeSortItem property.</p>
-<app-attribute-sorting></app-attribute-sorting>
+                <h3>Sorting by Attribute. </h3> 
+                <p>You can sort data by an attribute value with the attributeSortItem property.</p>
+                <app-attribute-sorting></app-attribute-sorting> 
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

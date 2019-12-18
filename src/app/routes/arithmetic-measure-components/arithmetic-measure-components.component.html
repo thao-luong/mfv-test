@@ -1,25 +1,46 @@
+<app-header></app-header>
+<div style="margin-left: 100px;">
+    <mat-sidenav-container style ="background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+            <a mat-list-item [routerLink]="'/basic-components'"> Basic Components </a>
+            <a mat-list-item [routerLink]="'/pivot-table-components'"> Pivot Table </a>
+            <a mat-list-item [routerLink]="'/sorting-components'"> Sorting </a>
+            <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+            <a mat-list-item [routerLink]="'/visualization-components'"> Visualization Components </a>
+            <a mat-list-item [routerLink]="'/drilling-components'"> Drilling </a>
+            <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter </a>
+            <a mat-list-item [routerLink]="'/arithmetic-measure-components'"> Arithmetic Measures </a>
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px;margin-right: 150px;">
+                <router-outlet></router-outlet>                
+                <h2>Arithmetic Measures</h2>
+                <p>These examples show how to configure visual components like column charts or headlines to show data calculated on demand with defined arithmetical operations.</p>
+                <p>Any arithmetic measure is built on top of two measures and given arithmetic operation between them. The base measures can be of any type (including the complex measures, such as <a href="/time-over-time-comparison">Time Over Time Comparison </a> or even another Arithmetic Measure).</p>
+                <hr className="separator" />
 
-<h2>Arithmetic Measures</h2>
-<p>These examples show how to configure visual components like column charts or headlines to show data calculated on demand with defined arithmetical operations.</p>
-<p>Any arithmetic measure is built on top of two measures and given arithmetic operation between them. The base measures can be of any type (including the complex measures, such as <a href="/time-over-time-comparison">Time Over Time Comparison </a> or even another Arithmetic Measure).</p>
-<hr className="separator" />
+                <h3>Ratio</h3>
+                <p>Take two measures and divide them (e.g. gross margin = gross profit / net sales).</p>
+                <app-arithmetic-measures-ratio></app-arithmetic-measures-ratio>
 
-<h3>Ratio</h3>
-<p>Take two measures and divide them (e.g. gross margin = gross profit / net sales).</p>
-<app-arithmetic-measures-ratio></app-arithmetic-measures-ratio>
+                <h3>Change</h3>
+                <p>Calculate percentual change between two measures.</p>
+                <p>Note: This example shows how it is possible to use Time Over Time Comparison with Arithmetic Measures to display trend of the given metric.</p>
+                <app-arithmetic-measures-change></app-arithmetic-measures-change>
 
-<h3>Change</h3>
-<p>Calculate percentual change between two measures.</p>
-<p>Note: This example shows how it is possible to use Time Over Time Comparison with Arithmetic Measures to display trend of the given metric.</p>
-<app-arithmetic-measures-change></app-arithmetic-measures-change>
+                <h3>Sum and difference</h3>
+                <p>Add or subtract two measures (e.g. revenue in 2017 - revenue in 2016).</p>
+                <app-arithmetic-measures-sum></app-arithmetic-measures-sum>
 
-<h3>Sum and difference</h3>
-<p>Add or subtract two measures (e.g. revenue in 2017 - revenue in 2016).</p>
-<app-arithmetic-measures-sum></app-arithmetic-measures-sum>
+                <h3>Multiplication</h3>
+                <p>Multiply two measures (e.g. price per unit x volume = revenue).</p>
+                <app-arithmetic-measures-multiplication></app-arithmetic-measures-multiplication>
 
-<h3>Multiplication</h3>
-<p>Multiply two measures (e.g. price per unit x volume = revenue).</p>
-<app-arithmetic-measures-multiplication></app-arithmetic-measures-multiplication>
-
-<h3>Arithmetic Measures with Drilling</h3>
-<app-arithmetic-measure-drilling></app-arithmetic-measure-drilling>
+                <h3>Arithmetic Measures with Drilling</h3>
+                <app-arithmetic-measure-drilling></app-arithmetic-measure-drilling>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
