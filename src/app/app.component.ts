@@ -1,31 +1,31 @@
 ﻿import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-// import { AuthenticationService } from './_services';
-import { User } from './_models';
-import { AppToolbarService, MenuItem } from './app-toolbar/app-toolbar.component';
+import sdk from '@gooddata/gooddata-js';
+import { MenuItem } from './app-toolbar/app-toolbar.component';
 
 @Component({
     selector: 'app',
     templateUrl: 'app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['app.component.css']
 })
 export class AppComponent {
-    currentUser: User;
+    isLogged: boolean;
     mainMenuItems;
     activeMenuItem$: Observable<MenuItem>;
 
     constructor(
-        private router: Router,
-        private toolbarService: AppToolbarService
-        // private authenticationService: AuthenticationService
+        private router: Router
     ) {
-        // this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-        this.mainMenuItems = this.toolbarService.getMenuItems();
-        this.activeMenuItem$ = this.toolbarService.activeMenuItem$;
+        sdk.user.isLoggedInProject("ht3owbpk6h0yfjtkcsgva3osu3z7paol").then((isOk) => {
+            if (isOk) {
+                this.isLogged = true;
+            }
+        })
     }
     logout() {
-        // this.authenticationService.logout();
+        sdk.user.logout();
         this.router.navigate(['/login']);
+        this.isLogged = false;
     }
 }

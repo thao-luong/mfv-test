@@ -1,64 +1,85 @@
+<app-header></app-header>
+<div style="margin-left: 100px;">
+    <mat-sidenav-container style ="background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+            <a mat-list-item [routerLink]="'/basic-components'"> Basic Components </a>
+            <a mat-list-item [routerLink]="'/pivot-table-components'"> Pivot Table </a>
+            <a mat-list-item [routerLink]="'/sorting-components'"> Sorting </a>
+            <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+            <a mat-list-item [routerLink]="'/visualization-components'"> Visualization Components </a>
+            <a mat-list-item [routerLink]="'/drilling-components'"> Drilling </a>
+            <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter </a>
+            <a mat-list-item [routerLink]="'/arithmetic-measure-components'"> Arithmetic Measures </a>
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px;margin-right: 150px;">
+                <router-outlet></router-outlet>
+                <h2>Visualization </h2>
+                <p>These are the examples of the generic Visualization component that uses URI or Identifier to identify insights.</p>
+                <hr className="separator" />
 
-<h2>Visualization </h2>
-<p>These are the examples of the generic Visualization component that uses URI or Identifier to identify insights.</p>
-<hr className="separator" />
+                <div> 
+                    <h2>Visualization by Identifier</h2>
+                    
+                    <h3>Area Chart</h3> 
+                    <app-visualization-area-chart></app-visualization-area-chart>
 
-<div> 
-    <h2>Visualization by Identifier</h2>
-    
-    <h3>Area Chart</h3> 
-    <app-visualization-area-chart></app-visualization-area-chart>
+                    <h3>Pivot Table</h3> 
+                    <app-visualization-pivot-table></app-visualization-pivot-table>
 
-    <h3>Pivot Table</h3> 
-    <app-visualization-pivot-table></app-visualization-pivot-table>
+                    <h3>Bar Chart</h3> 
+                    <app-visualization-bar-chart></app-visualization-bar-chart>
 
-    <h3>Bar Chart</h3> 
-    <app-visualization-bar-chart></app-visualization-bar-chart>
+                    <h3>Column Chart</h3> 
+                    <app-visualization-column-chart></app-visualization-column-chart>
+                    
+                    <h3>Line Chart</h3> 
+                    <app-visualization-line-chart></app-visualization-line-chart>
 
-    <h3>Column Chart</h3> 
-    <app-visualization-column-chart></app-visualization-column-chart>
-    
-    <h3>Line Chart</h3> 
-    <app-visualization-line-chart></app-visualization-line-chart>
+                    <h3>Treemap</h3>
+                    <app-visualization-treemap-by-identifier></app-visualization-treemap-by-identifier>
+                    
+                    <h3>Heatmap</h3>
+                    <app-visualization-heatmap-by-identifier></app-visualization-heatmap-by-identifier>
+                    
+                    <h3>Pie Chart</h3>
+                    <app-visualization-pie-chart-by-identifier></app-visualization-pie-chart-by-identifier>
+                    
+                    <h3>Donut Chart</h3>
+                    <app-visualization-donut-chart-by-identifier></app-visualization-donut-chart-by-identifier>
+                </div>
+                <hr className="separator" />
+                <div>
+                    <h2> Visualization by URI</h2>
 
-    <h3>Treemap</h3>
-    <app-visualization-treemap-by-identifier></app-visualization-treemap-by-identifier>
-    
-    <h3>Heatmap</h3>
-    <app-visualization-heatmap-by-identifier></app-visualization-heatmap-by-identifier>
-    
-    <h3>Pie Chart</h3>
-    <app-visualization-pie-chart-by-identifier></app-visualization-pie-chart-by-identifier>
-    
-    <h3>Donut Chart</h3>
-    <app-visualization-donut-chart-by-identifier></app-visualization-donut-chart-by-identifier>
-</div>
-<hr className="separator" />
-<div>
-    <h2> Visualization by URI</h2>
+                    <h3>Area Chart</h3> 
+                    <app-visualization-area-chart-by-uri></app-visualization-area-chart-by-uri>
 
-    <h3>Area Chart</h3> 
-    <app-visualization-area-chart-by-uri></app-visualization-area-chart-by-uri>
+                    <h3>Stack Column Chart</h3> 
+                    <app-visualization-column-chart-by-uri></app-visualization-column-chart-by-uri>
 
-    <h3>Stack Column Chart</h3> 
-    <app-visualization-column-chart-by-uri></app-visualization-column-chart-by-uri>
+                    <h3>Line Chart</h3> 
+                    <app-visualization-line-chart-by-uri></app-visualization-line-chart-by-uri>
 
-    <h3>Line Chart</h3> 
-    <app-visualization-line-chart-by-uri></app-visualization-line-chart-by-uri>
+                    <h3>Headline</h3>
+                    <app-visualization-headline-by-uri></app-visualization-headline-by-uri>
 
-    <h3>Headline</h3>
-    <app-visualization-headline-by-uri></app-visualization-headline-by-uri>
-
-    <h3>Bubble Chart</h3>
-    <app-visualization-bubble-chart-by-uri></app-visualization-bubble-chart-by-uri>
-    
-    <h3>Scatter Chart</h3>
-    <app-visualization-scatter-chart-by-uri></app-visualization-scatter-chart-by-uri>
-    
-    <h3>Pie Chart</h3>
-    <app-visualization-pie-chart-by-uri></app-visualization-pie-chart-by-uri>
-    
-    <h3>Donut Chart</h3>
-    <app-visualization-donut-chart-by-uri></app-visualization-donut-chart-by-uri>
-</div>
+                    <h3>Bubble Chart</h3>
+                    <app-visualization-bubble-chart-by-uri></app-visualization-bubble-chart-by-uri>
+                    
+                    <h3>Scatter Chart</h3>
+                    <app-visualization-scatter-chart-by-uri></app-visualization-scatter-chart-by-uri>
+                    
+                    <h3>Pie Chart</h3>
+                    <app-visualization-pie-chart-by-uri></app-visualization-pie-chart-by-uri>
+                    
+                    <h3>Donut Chart</h3>
+                    <app-visualization-donut-chart-by-uri></app-visualization-donut-chart-by-uri>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 
 

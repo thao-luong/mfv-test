@@ -18,14 +18,8 @@ export class LoginComponent implements OnInit {
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
         private alertService: AlertService
-    ) {
-        // redirect to home if already logged in
-        if (this.authenticationService.currentUserValue) {
-            this.router.navigate(['/']);
-        }
-    }
+    ) {  }
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
@@ -39,8 +33,6 @@ export class LoginComponent implements OnInit {
 
     // convenience getter for easy access to form fields
     get f() { return this.loginForm.controls; }
-    get username() { return this.loginForm.get('username'); }
-    get password() { return this.loginForm.get('password'); }
 
     onSubmit() {
         this.submitted = true;
@@ -51,17 +43,15 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-
-        sdk.user
-            .login(this.username.value, this.password.value).then(
-                data => {
-                    console.log('==> Navigate to home');
-                    this.router.navigateByUrl('/basic-components');
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                }
-            );
+        sdk.user.login(this.f.username.value, this.f.password.value)
+                .then(
+                    data => {
+                        console.log('==> Navigate to home');
+                        this.router.navigateByUrl('/basic-components');
+                    },
+                    error => {
+                        this.alertService.error(error);
+                        this.loading = false;
+                    });
     }
 }

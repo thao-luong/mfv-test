@@ -21,7 +21,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { KpiComponent } from './components/kpi/kpi.component';
@@ -107,7 +106,6 @@ import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-c
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent,
         LoginComponent,
         RegisterComponent,
         KpiComponent,
