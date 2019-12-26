@@ -85,6 +85,8 @@ import { VisualizationPieChartByIdentifierComponent } from './visualizations/vis
 import { VisualizationDonutChartByUriComponent } from './visualizations/visualization-donut-chart-by-uri/visualization-donut-chart-by-uri.component';
 import { VisualizationPieChartByUriComponent } from './visualizations/visualization-pie-chart-by-uri/visualization-pie-chart-by-uri.component'
 import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-color-palette/area-chart-has-color-palette.component';
+import { NewAttributeFilterComponent } from './components/new-attribute-filter/new-attribute-filter.component';
+import { AttributeFilterDefinitionByURIComponent } from './components/attribute-filter-definition-by-uri/attribute-filter-definition-by-uri.component'
 
 @NgModule({
     imports: [
@@ -171,6 +173,9 @@ import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-c
         VisualizationDonutChartByUriComponent,
         VisualizationPieChartByUriComponent,
         HeaderComponent,
+        NewAttributeFilterComponent,
+        AttributeFilterDefinitionByURIComponent
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

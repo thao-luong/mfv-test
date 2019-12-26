@@ -1,7 +1,7 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
-import { AuthGuard } from './_guards';
+import { AuthGuard } from './_helpers';
 import { BasicComponentsComponent } from './routes/basic-components/basic-components.component';
 import { PivotTableComponentsComponent } from './routes/pivot-table-components/pivot-table-components.component';
 import { SortingComponentsComponent } from './routes/sorting-components/sorting-components.component';
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'basic-components', component: BasicComponentsComponent },
+    { path: 'basic-components', component: BasicComponentsComponent},
     { path: 'pivot-table-components', component: PivotTableComponentsComponent },
     { path: 'sorting-components', component: SortingComponentsComponent },
     { path: 'time-over-time-comparison', component: TimeOverTimeComparisonComponent },

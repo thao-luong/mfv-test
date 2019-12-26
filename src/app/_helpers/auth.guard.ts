@@ -3,6 +3,7 @@ import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from
 
 import { AuthenticationService } from '@app/_services';
 import sdk from '@gooddata/gooddata-js';
+import { projectId } from '../../utils/fixtures';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
@@ -12,13 +13,11 @@ export class AuthGuard implements CanActivate {
     ) {}
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-        return sdk.user.isLoggedInProject("ht3owbpk6h0yfjtkcsgva3osu3z7paol")
+        return sdk.user.isLoggedInProject(`${projectId}`)
             .then(() => {
-                debugger
                 return true;
             })
             .catch(() => {
-                debugger
                 this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
                 return false;
             });

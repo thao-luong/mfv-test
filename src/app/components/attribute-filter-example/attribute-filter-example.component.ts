@@ -10,19 +10,17 @@ import {
   locationResortIdentifier,
   locationResortUri,
   projectId,
-} from "../../../utils/fixtures";
+} from '../../../utils/fixtures';
 
 let self: any;
-interface AttributeFilterBucketProps {
+
+interface AttributeFilterProps {
+  projectId: any;
   identifier: any;
   fullscreenOnMobile: boolean;
   onApply: any;
 }
-interface AttributeFilterProps {
-  projectId: any;
-  fullscreenOnMobile: boolean;
-  onApply: any;
-}
+
 export interface LineChartBucketProps {
   measures: any[];
   trendBy?: any;
@@ -30,6 +28,7 @@ export interface LineChartBucketProps {
   filters?: any[];
   sortBy?: any[];
 }
+
 export interface LineChartProps extends LineChartBucketProps {
   projectId: string;
 }
@@ -47,15 +46,16 @@ export interface ErrorProps {
 
 @Component({
   selector: 'app-attribute-filter-example',
-  template: '<div class="attribute-filter" style="height:50px" [id]="rootDomID"></div><div class="attribute-filter" style="height:500px" [id]="lineRoomData"></div>',
+  template: `<div class="attribute-filter" style="height:50px" [id]="rootDomID"></div>
+  <div class="attribute-filter" style="height:500px" [id]="lineRoomData"></div>`,
 })
 
 export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   message: string;
   filters: any[];
   totalSales = [Model.measure(totalSalesIdentifier)
-    .format("#,##0")
-    .alias("$ Total Sales")]
+    .format('#,##0')
+    .alias('$ Total Sales')];
 
   locationResort = Model.attribute(locationResortIdentifier);
 
@@ -74,7 +74,7 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
     return node;
   }
 
-  protected getAttributeProps(): AttributeFilterProps | AttributeFilterBucketProps {
+  protected getAttributeProps(): AttributeFilterProps {
     return {
       projectId: projectId,
       identifier: locationResortIdentifier,
@@ -83,6 +83,7 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
 
     };
   }
+
   protected getLineChartProps(): LineChartProps {
     return {
       projectId: projectId,
@@ -97,13 +98,16 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
       message: this.message,
     };
   }
+
   private isMounted(): boolean {
     return !!this.rootDomID;
   }
+
   onLoadingChanged(...params) {
-    // eslint-disable-next-line no-console
-    console.info("AttributeFilterExample onLoadingChanged", ...params);
+    // tslint:disable-next-line: no-console
+    console.info('AttributeFilterExample onLoadingChanged', ...params);
   }
+
   onApply(filter) {
     self.message = null;
     if (filter.in) {
@@ -113,10 +117,12 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
     }
     self.renderLineChart();
   }
+
   onError(...params) {
-    // eslint-disable-next-line no-console
-    console.info("AttributeFilterExample onLoadingChanged", ...params);
+    // tslint:disable-next-line: no-console
+    console.info('AttributeFilterExample onLoadingChanged', ...params);
   }
+
   public filterPositiveAttribute(filter) {
     var filters;
     if (filter.in.length !== 0) {
@@ -131,10 +137,11 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
         },
       ];
     } else {
-      return self.message = "The filter must have at least one item selected";
+      return self.message = 'The filter must have at least one item selected';
     }
     return filters;
   }
+
   public filterNegativeAttribute(filter) {
     var filters;
     if (filter.notIn.length !== 0) {
@@ -151,6 +158,7 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
     }
     return filters;
   }
+
   protected render() {
     if (this.isMounted()) {
       ReactDOM.render(
@@ -170,7 +178,7 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
   ngOnInit() {
     self = this;
     this.rootDomID = uuid.v1();
-    this.lineRoomData = "lineRoomData";
+    this.lineRoomData = 'lineRoomData';
   }
 
   ngOnChanges() {
@@ -180,8 +188,10 @@ export class AttributeFilterExampleComponent implements OnInit, OnDestroy, OnCha
   ngAfterViewInit() {
     this.render();
   }
+
   ngOnDestroy() {
     // Uncomment if Angular 4 issue that ngOnDestroy is called AFTER DOM node removal is resolved
     // ReactDOM.unmountComponentAtNode(this.getRootDomNode())
   }
+
 }
