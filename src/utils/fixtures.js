@@ -87,5 +87,6 @@ export const grossProfitUri = "/gdc/md/${projectId}/obj/6877";
 export const pivotTableVisualizationIdentifier = "aahHSnOtdKuH";
 export const pivotTableVisualizationUri = `/gdc/md/${projectId}/obj/9176`;
 export const ProductUri = `/gdc/md/${demoProjectId}/obj/949`;
-export const StageNameUri = `/gdc/md/${demoProjectId}/obj/1095`; 
+export const StageNameUri = `/gdc/md/${demoProjectId}/obj/1095`;
+export const employeeNameDisplayFormUri = `/gdc/md/${projectId}/obj/2201`;
 

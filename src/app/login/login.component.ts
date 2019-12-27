@@ -5,10 +5,8 @@ import sdk from '@gooddata/gooddata-js';
 import { AlertService, AuthenticationService } from '@app/_services';
 
 @Component({ templateUrl: 'login.component.html' })
+
 export class LoginComponent implements OnInit {
-    setErrorCheckingProjectAvailability(error: any) {
-        throw new Error('Method not implemented.');
-    }
     loginForm: FormGroup;
     loading = false;
     submitted = false;
@@ -19,7 +17,7 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private alertService: AlertService
-    ) {  }
+    ) { }
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
@@ -44,14 +42,14 @@ export class LoginComponent implements OnInit {
 
         this.loading = true;
         sdk.user.login(this.f.username.value, this.f.password.value)
-                .then(
-                    data => {
-                        console.log('==> Navigate to home');
-                        this.router.navigateByUrl('/basic-components');
-                    },
-                    error => {
-                        this.alertService.error(error);
-                        this.loading = false;
-                    });
+            .then(
+                data => {
+                    console.log('==> Navigate to home');
+                    this.router.navigateByUrl('/basic-components');
+                },
+                error => {
+                    this.alertService.error(error);
+                    this.loading = false;
+                });
     }
 }
