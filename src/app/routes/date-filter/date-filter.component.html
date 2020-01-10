@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div style="margin-left: 100px;">
+  <mat-sidenav-container style="background-color: #fafafa;">
+    <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+      <mat-nav-list style="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+        <a mat-list-item [routerLink]="'/'"> Basic Components </a>
+        <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
+        <a mat-list-item [routerLink]="'/visualization'"> Visualization Component </a>
+        <a mat-list-item [routerLink]="'/sorting'"> Sorting </a>
+        <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+        <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter Component </a>
+        <a mat-list-item [routerLink]="'/date-filter-component'"> Date Filter Component </a>
+        <a mat-list-item [routerLink]="'/arithmetic-measures'"> Arithmetic Measures </a>
+        <a mat-list-item [routerLink]="'/drilling'"> Drilling </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="margin-left: 20px;margin-right: 150px;">
+        <router-outlet></router-outlet>
+        <h2>Date Filter Component</h2>
+        <p>These examples show how to use the Date Filter component.</p>
+
+        <hr className="separator" />
+
+        <h3>Date Filter</h3>
+        <p>This example shows a full-featured date filter component.</p>
+
+        <app-date-filter-config></app-date-filter-config>
+
+        <h3> Filtering a report </h3>
+        <p>
+          This example shows how to add date filter component into a report. Presets and floating range form
+          is restricted to years.
+        </p>
+        <app-date-filter-config-example></app-date-filter-config-example>
+        
+        <h3> Apply date filter for Visualization</h3>
+        <app-date-filter-visualization-example></app-date-filter-visualization-example>
+      </div>
+    </mat-sidenav-content>
