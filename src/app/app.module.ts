@@ -86,7 +86,11 @@ import { VisualizationDonutChartByUriComponent } from './visualizations/visualiz
 import { VisualizationPieChartByUriComponent } from './visualizations/visualization-pie-chart-by-uri/visualization-pie-chart-by-uri.component'
 import { AreaChartHasColorPaletteComponent } from './components/area-chart-has-color-palette/area-chart-has-color-palette.component';
 import { NewAttributeFilterComponent } from './components/new-attribute-filter/new-attribute-filter.component';
-import { AttributeFilterDefinitionByURIComponent } from './components/attribute-filter-definition-by-uri/attribute-filter-definition-by-uri.component'
+import { AttributeFilterDefinitionByURIComponent } from './components/attribute-filter-definition-by-uri/attribute-filter-definition-by-uri.component';
+import { DateFilterConfigComponent } from './components/date-filter-config/date-filter-config.component';
+import { DateFilterComponent } from './routes/date-filter/date-filter.component';
+import { DateFilterConfigExampleComponent } from './components/date-filter-config-example/date-filter-config-example.component';
+import { DateFilterVisComponent } from './components/date-filter-vis/date-filter-vis.component'
 
 @NgModule({
     imports: [
@@ -174,7 +178,11 @@ import { AttributeFilterDefinitionByURIComponent } from './components/attribute-
         VisualizationPieChartByUriComponent,
         HeaderComponent,
         NewAttributeFilterComponent,
-        AttributeFilterDefinitionByURIComponent
+        AttributeFilterDefinitionByURIComponent,
+        DateFilterConfigComponent,
+        DateFilterComponent,
+        DateFilterConfigExampleComponent,
+        DateFilterVisComponent
 
     ],
     providers: [

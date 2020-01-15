@@ -12,19 +12,20 @@ import { ArithmeticMeasureComponentsComponent } from './routes/arithmetic-measur
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { DateFilterComponent } from './routes/date-filter/date-filter.component';
 
 const appRoutes: Routes = [
-    { path: '', component: BasicComponentsComponent, canActivate: [AuthGuard] },
+    { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'basic-components', component: BasicComponentsComponent},
-    { path: 'pivot-table-components', component: PivotTableComponentsComponent },
-    { path: 'sorting-components', component: SortingComponentsComponent },
+    { path: 'pivot-table', component: PivotTableComponentsComponent },
+    { path: 'sorting', component: SortingComponentsComponent },
     { path: 'time-over-time-comparison', component: TimeOverTimeComparisonComponent },
     { path: 'attribute-filter-components', component: AttributeFilterComponentsComponent },
-    { path: 'drilling-components', component: DrillingComponentsComponent },
-    { path: 'visualization-components', component: VisualizationComponentsComponent },
-    { path: 'arithmetic-measure-components', component: ArithmeticMeasureComponentsComponent },
+    { path: 'drilling', component: DrillingComponentsComponent },
+    { path: 'visualization', component: VisualizationComponentsComponent },
+    { path: 'arithmetic-measures', component: ArithmeticMeasureComponentsComponent },
+    { path: 'date-filter-component', component: DateFilterComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
