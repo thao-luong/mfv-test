@@ -89,8 +89,11 @@ import { NewAttributeFilterComponent } from './components/new-attribute-filter/n
 import { AttributeFilterDefinitionByURIComponent } from './components/attribute-filter-definition-by-uri/attribute-filter-definition-by-uri.component';
 import { DateFilterConfigComponent } from './components/date-filter-config/date-filter-config.component';
 import { DateFilterComponent } from './routes/date-filter/date-filter.component';
-import { DateFilterConfigExampleComponent } from './components/date-filter-config-example/date-filter-config-example.component';
-import { DateFilterVisComponent } from './components/date-filter-vis/date-filter-vis.component'
+import { DateFilterConfigExampleComponent } from './components/date-filter-config-example/date-filter-config-example.component';
+import { DateFilterVisComponent } from './components/date-filter-vis/date-filter-vis.component';
+import { AdvancedUseCasesComponent } from './routes/advanced-use-cases/advanced-use-cases.component';
+import { GlobalFiltersComponent } from './routes/global-filters/global-filters.component';
+import { GlobalFiltersExampleComponent } from './components/global-filters-example/global-filters-example.component';
 
 @NgModule({
     imports: [
@@ -181,9 +184,11 @@ import { DateFilterVisComponent } from './components/date-filter-vis/date-filter
         AttributeFilterDefinitionByURIComponent,
         DateFilterConfigComponent,
         DateFilterComponent,
-        DateFilterConfigExampleComponent,
-        DateFilterVisComponent
-
+        DateFilterConfigExampleComponent,
+        DateFilterVisComponent,
+        AdvancedUseCasesComponent,
+        GlobalFiltersComponent,
+        GlobalFiltersExampleComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

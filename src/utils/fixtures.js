@@ -64,6 +64,7 @@ export const locationNameAttributeUri = `/gdc/md/${projectId}/obj/2204`;
 export const locationNameDisplayFormIdentifier = "label.restaurantlocation.locationname";
 export const locationResortIdentifier = "label.restaurantlocation.locationresort";
 export const locationResortUri = `/gdc/md/${demoProjectId}/obj/2206`;
+export const employeeNameUri = `/gdc/md/${demoProjectId}/obj/2200`;
 export const locationStateAttributeIdentifier = "attr.restaurantlocation.locationstate";
 export const locationStateAttributeUri = `/gdc/md/${projectId}/obj/2210`;
 export const locationStateAttributeCaliforniaUri = `/gdc/md/${projectId}/obj/2210/elements?id=6340116`;
