@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div style='margin-left: 100px;'>
+    <mat-sidenav-container style ='background-color: #fafafa;'>
+        <mat-sidenav mode='side' opened style='border-right: solid 0px; background-color: #fafafa;'>
+            <mat-nav-list style ='border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;'>
+                <a mat-list-item [routerLink]="'/'"> Basic Components </a>
+                <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
+                <a mat-list-item [routerLink]="'/visualization'"> Visualization Component </a>
+                <a mat-list-item [routerLink]="'/sorting'"> Sorting </a>
+                <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+                <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter Component </a>
+                <a mat-list-item [routerLink]="'/date-filter-component'"> Date Filter Component </a>
+                <a mat-list-item [routerLink]="'/arithmetic-measures'"> Arithmetic Measures </a>
+                <a mat-list-item [routerLink]="'/advanced/global-filters'"> Advanced Use Cases </a>
+                <a mat-list-item [routerLink]="'/drilling'"> Drilling </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style='margin-left: 20px;margin-right: 150px;'>
+                <router-outlet></router-outlet> 
+                <div class='gd-tabs'>
+                  <a class='gd-tab is-active' mat-list-item [routerLink]="'/advanced/global-filters'"> Global Filters </a>
+                </div>
+                <div class='example-wrapper'>
+                    <div>
+                        <h1>Global Filters</h1>
+                        <p>
+                            Here is how you can combine several components to apply a dynamic attribute filter to multiple
+                            display and GoodData.UI components.
+                        </p>
+                        <p>
+                            The AttributeElements component loads values of the Employee Name attribute. When you click an
+                            attribute value (employee) in the left pane, the KPIs, pie chart and bar chart are filtered by
+                            the selected attribute value (employee). In addition, employee information is passed into the
+                            EmployeeCard component that renders static data mixed with external data.
+                        </p>
+                    </div>
+                    <app-global-filters-example></app-global-filters-example>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 

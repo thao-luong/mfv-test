@@ -13,6 +13,8 @@ import { DrillingComponentsComponent } from './routes/drilling-components/drilli
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { DateFilterComponent } from './routes/date-filter/date-filter.component';
+import { AdvancedUseCasesComponent } from './routes/advanced-use-cases/advanced-use-cases.component';
+import { GlobalFiltersComponent } from './routes/global-filters/global-filters.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -26,6 +28,8 @@ const appRoutes: Routes = [
     { path: 'visualization', component: VisualizationComponentsComponent },
     { path: 'arithmetic-measures', component: ArithmeticMeasureComponentsComponent },
     { path: 'date-filter-component', component: DateFilterComponent },
+    //{ path: 'advanced', component: AdvancedUseCasesComponent},
+    { path: 'advanced/global-filters', component: GlobalFiltersComponent},
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

@@ -5,6 +5,9 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 //import * as Highcharts from 'highcharts';
 
+import { factory } from '@gooddata/gooddata-js';
+window['gooddata'] = factory({ domain: '' });
+
 if (environment.production) {
   enableProdMode();
 }
