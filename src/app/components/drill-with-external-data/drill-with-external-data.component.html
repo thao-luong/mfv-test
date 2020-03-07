@@ -1,26 +1,28 @@
-<div class="states">
-    <h3>States</h3>
-    <div class="drill-in-states" [id]="tableStatesDomID"></div>
-</div>
-<div class="sales">
-    <h3>Sales from {{state}}</h3>
-    <div class="drill-in-sales" [id]="columnSalesDomID"></div>
-</div>
-<div class="employees">
-    <h3>Employees</h3>
-    <div class="drill-in-employees" [id]="tableEmployeesDomID"></div>
-</div>
-<div class="employeeProfile s-employee-profile">
-    <h3>{{employeeName}}</h3>
+<div class="layout-wrapper">
     <div>
-        <img class="picture" src='https://randomuser.me/api/portraits/{{gender}}/{{id}}.jpg' alt="" />
+        <h3>States</h3>
+        <div style="height: 300px;" className="s-state-table" [id]="tableStatesDomID"></div>
+        <h3>Employees from {{state}}</h3>
+        <div style="height: 250px;" className="s-employee-table" [id]="tableEmployeesDomID"></div>
     </div>
-    <div class="text" type="text/css">
-        <p>Date of birth: {{dob}}</p>
-        <p>
-            Place of birth: {{born_city}}, {{born_state}}
-        </p>
-        <p>Phone: {{phone}}</p>
-        <p>Employed since: {{registeredDate}}</p>
+    <div className="details">
+        <h3>Sales from {{state}}</h3>
+        <div style="height: 300px;" className="s-sales-chart" [id]="columnSalesDomID"></div>
+        <div>
+            <h3 className="s-employee-name">{{employeeName? employeeName: "No Data"}}</h3>
+            <div class="employeeProfile s-employee-profile">
+                <div>
+                    <img class="picture" src='https://randomuser.me/api/portraits/{{gender}}/{{id}}.jpg' alt="" />
+                </div>
+                <div class="text" type="text/css">
+                    <p>Date of birth: {{dob}}</p>
+                    <p>
+                        Place of birth: {{born_city}}, {{born_state}}
+                    </p>
+                    <p>Phone: {{phone}}</p>
+                    <p>Employed since: {{registeredDate}}</p>
+                </div>
+            </div>
+        </div>        
     </div>
 </div>

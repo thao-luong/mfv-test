@@ -1,19 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as uuid from 'uuid';
 import * as moment from 'moment';
 import * as invariant from 'invariant';
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, OnChanges, AfterViewInit } from '@angular/core';
 
 import '@gooddata/react-components/styles/css/main.css';
 import {
   Table,
   ColumnChart,
-  LoadingComponent,
-  ErrorComponent,
   HeaderPredicateFactory,
   Model,
 } from "@gooddata/react-components";
+
 import {
   projectId,
   employeeNameIdentifier,
@@ -26,6 +24,7 @@ import {
 } from '../../../utils/fixtures.js';
 
 let self: any;
+const dateFormat = "YYYY-MM-DD";
 
 interface TableDrillExampleProps {
   projectId: any;
@@ -37,6 +36,7 @@ interface TableDrillExampleProps {
   filters?: any[];
   sortBy?: any[];
 }
+
 export interface ColumnChartDrillExampleProps {
   projectId: string;
   measures: any[];
@@ -47,15 +47,14 @@ export interface ColumnChartDrillExampleProps {
   filters?: any[];
   sortBy?: any[];
 }
-const dateFormat = "YYYY-MM-DD";
+
 @Component({
   selector: 'app-drill-with-external-data',
   templateUrl: './drill-with-external-data.component.html',
   styleUrls: ['./drill-with-external-data.component.css']
 })
+
 export class DrillWithExternalDataComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
-  @Input() filters: any[];
-  @Input() sortBy: any[];
   location: any;
   state: any;
   employeeProfile: {
@@ -68,6 +67,7 @@ export class DrillWithExternalDataComponent implements OnInit, OnDestroy, OnChan
     phone: any;
     registeredDate: any;
   }
+
   employee3rdPartyData: {
     error: null,
     isLoading: false,
@@ -191,6 +191,7 @@ export class DrillWithExternalDataComponent implements OnInit, OnDestroy, OnChan
     "averageDailyTotalSales",
     "Average Sales",
   );
+
   stateAttribute = this.getAttribute(locationStateDisplayFormIdentifier, "locationState");
   employeeNameAttribute = this.getAttribute(employeeNameIdentifier, "employeeName");
   locationNameAttribute = this.getAttribute(locationNameDisplayFormIdentifier, "locationName");
@@ -269,4 +270,5 @@ export class DrillWithExternalDataComponent implements OnInit, OnDestroy, OnChan
     // Uncomment if Angular 4 issue that ngOnDestroy is called AFTER DOM node removal is resolved
     //ReactDOM.unmountComponentAtNode(this.getRootDomNode())
   }
+  
 }
