@@ -1,56 +1,6 @@
-.states {
-    height: 50px;
-    width: 400px;
-    float: left;
-    display: block;
-    margin-top: 10px;
-}
-
-.drill-in-states {
-    height: 300px;
-    width: 400px;
-    float: left;
-    display: block;
-    margin-top: 5px;
-}
-
-.sales {
-    height: 50px;
-    width: 500px;
-    float: right;
-    display: block;
-    margin-top: 10px;
-}
-
-.drill-in-sales {
-    height: 300px;
-    width: 500px;
-    float: right;
-    display: block;
-    margin-top: 5px;
-}
-
-.employees {
-    height: 50px;
-    width: 400px;
-    float: left;
-    display: block;
-    margin-top: 320px;
-}
-
-.drill-in-employees {
-    height: 300px;
-    width: 400px;
-    float: left;
-    display: block;
-    margin-top: 5px;
-}
-
 .employeeProfile {
-    float: right;
-    display: block;
-    margin-top: 320px;
-    margin-right: 320px;
+    display: flex;
+    margin-top: 20px;
 }
 
 .picture {
@@ -63,4 +13,39 @@
 .text {
     flex: 1 1 auto;
     margin-left: 20px;
+}
+
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+}
+
+h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #14b2e2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.employeeTable {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.employeeTableWrapper {
+    position: relative;
+    height: 100%;
+    flex: 1 0 auto;
+}
+
+.details {
+    padding-left: 20px;
+}
+
+.employeesHeading {
+    margin-top: 20px;
 }
