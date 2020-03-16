@@ -94,6 +94,8 @@ import { DateFilterVisComponent } from './components/date-filter-vis/date-filter
 import { AdvancedUseCasesComponent } from './routes/advanced-use-cases/advanced-use-cases.component';
 import { GlobalFiltersComponent } from './routes/global-filters/global-filters.component';
 import { GlobalFiltersExampleComponent } from './components/global-filters-example/global-filters-example.component';
+import { ParentFilterComponent } from './routes/parent-filter/parent-filter.component';
+import { ParentFilterExampleComponent } from './components/parent-filter-example/parent-filter-example.component'
 
 @NgModule({
     imports: [
@@ -189,6 +191,9 @@ import { GlobalFiltersExampleComponent } from './components/global-filters-examp
         AdvancedUseCasesComponent,
         GlobalFiltersComponent,
         GlobalFiltersExampleComponent,
+        ParentFilterComponent,
+        ParentFilterExampleComponent
+        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
