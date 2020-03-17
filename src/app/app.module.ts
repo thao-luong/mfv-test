@@ -57,7 +57,6 @@ import { PreviousPeriodHeadLineExampleComponent } from './components/previous-pe
 import { AttributeFilterExampleComponent } from './components/attribute-filter-example/attribute-filter-example.component';
 import { AttributeFilterComponent } from './components/attribute-filter/attribute-filter.component';
 import { BasicComponentsComponent } from './routes/basic-components/basic-components.component';
-import { VisualizationComponentsComponent } from './routes/visualization-components/visualization-components.component';
 import { PivotTableComponentsComponent } from './routes/pivot-table-components/pivot-table-components.component';
 import { SortingComponentsComponent } from './routes/sorting-components/sorting-components.component';
 import { TimeOverTimeComparisonComponent } from './routes/time-over-time-comparison/time-over-time-comparison.component';
@@ -95,7 +94,15 @@ import { AdvancedUseCasesComponent } from './routes/advanced-use-cases/advanced-
 import { GlobalFiltersComponent } from './routes/global-filters/global-filters.component';
 import { GlobalFiltersExampleComponent } from './components/global-filters-example/global-filters-example.component';
 import { ParentFilterComponent } from './routes/parent-filter/parent-filter.component';
-import { ParentFilterExampleComponent } from './components/parent-filter-example/parent-filter-example.component'
+import { ParentFilterExampleComponent } from './components/parent-filter-example/parent-filter-example.component';
+import { VisualizationBulletChartByUriComponent } from './visualizations/visualization-bullet-chart-by-uri/visualization-bullet-chart-by-uri.component';
+import { VisualizationByUriComponent } from './routes/visualization-by-uri/visualization-by-uri.component';
+import { VisualizationByIdentifierComponent } from './routes/visualization-by-identifier/visualization-by-identifier.component';
+import { VisualizationComponent } from './routes/visualization-components/visualization.component';
+import { VisualizationBulletChartByIdentifierComponent } from './visualizations/visualization-bullet-chart-by-identifier/visualization-bullet-chart-by-identifier.component';
+import { BulletChartComponent } from './components/bullet-chart/bullet-chart.component';
+import { BulletChartHasAmMeasureComponent } from './components/bullet-chart-has-am-measure/bullet-chart-has-am-measure.component';
+import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-chart-has-measure-value-filter/bullet-chart-has-measure-value-filter.component'
 
 @NgModule({
     imports: [
@@ -156,7 +163,6 @@ import { ParentFilterExampleComponent } from './components/parent-filter-example
         AttributeFilterComponent,
         BasicComponentsComponent,
         PivotTableComponentsComponent,
-        VisualizationComponentsComponent,
         SortingComponentsComponent,
         AttributeFilterComponentsComponent,
         TimeOverTimeComparisonComponent,
@@ -192,8 +198,16 @@ import { ParentFilterExampleComponent } from './components/parent-filter-example
         GlobalFiltersComponent,
         GlobalFiltersExampleComponent,
         ParentFilterComponent,
-        ParentFilterExampleComponent
-        
+        ParentFilterExampleComponent,
+        VisualizationBulletChartByUriComponent,
+        VisualizationByUriComponent,
+        VisualizationByIdentifierComponent,
+        VisualizationComponent ,
+        VisualizationBulletChartByIdentifierComponent ,
+        BulletChartComponent ,
+        BulletChartHasAmMeasureComponent ,
+        BulletChartHasMeasureValueFilterComponent  
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

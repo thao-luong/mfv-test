@@ -7,7 +7,6 @@ import { PivotTableComponentsComponent } from './routes/pivot-table-components/p
 import { SortingComponentsComponent } from './routes/sorting-components/sorting-components.component';
 import { TimeOverTimeComparisonComponent } from './routes/time-over-time-comparison/time-over-time-comparison.component';
 import { AttributeFilterComponentsComponent } from './routes/attribut-filter-components/attribut-filter-components.component';
-import { VisualizationComponentsComponent } from './routes/visualization-components/visualization-components.component';
 import { ArithmeticMeasureComponentsComponent } from './routes/arithmetic-measure-components/arithmetic-measure-components.component';
 import { DrillingComponentsComponent } from './routes/drilling-components/drilling-components.component';
 import { CommonModule } from '@angular/common';
@@ -15,6 +14,8 @@ import { NgModule } from '@angular/core';
 import { DateFilterComponent } from './routes/date-filter/date-filter.component';
 import { GlobalFiltersComponent } from './routes/global-filters/global-filters.component';
 import { ParentFilterComponent } from './routes/parent-filter/parent-filter.component';
+import { VisualizationByUriComponent } from './routes/visualization-by-uri/visualization-by-uri.component';
+import { VisualizationByIdentifierComponent } from './routes/visualization-by-identifier/visualization-by-identifier.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     { path: 'time-over-time-comparison', component: TimeOverTimeComparisonComponent },
     { path: 'attribute-filter-components', component: AttributeFilterComponentsComponent },
     { path: 'drilling', component: DrillingComponentsComponent },
-    { path: 'visualization', component: VisualizationComponentsComponent },
+    { path: 'visualization/visualization-by-uri', component: VisualizationByUriComponent },
+    { path: 'visualization/visualization-by-identifier', component: VisualizationByIdentifierComponent },
     { path: 'arithmetic-measures', component: ArithmeticMeasureComponentsComponent },
     { path: 'date-filter-component', component: DateFilterComponent },
     { path: 'advanced/global-filters', component: GlobalFiltersComponent},

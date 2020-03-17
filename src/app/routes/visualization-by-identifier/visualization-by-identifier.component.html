@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div style='margin-left: 100px;'>
+    <mat-sidenav-container style ='background-color: #fafafa;'>
+        <mat-sidenav mode='side' opened style='border-right: solid 0px; background-color: #fafafa;'>
+            <mat-nav-list style ='border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;'>
+                <a mat-list-item [routerLink]="'/'"> Basic Components </a>
+                <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
+                <a mat-list-item [routerLink]="'/visualization/visualization-by-uri'"> Visualization Component </a>
+                <a mat-list-item [routerLink]="'/sorting'"> Sorting </a>
+                <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+                <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter Component </a>
+                <a mat-list-item [routerLink]="'/date-filter-component'"> Date Filter Component </a>
+                <a mat-list-item [routerLink]="'/arithmetic-measures'"> Arithmetic Measures </a>
+                <a mat-list-item [routerLink]="'/advanced/global-filters'"> Advanced Use Cases </a>
+                <a mat-list-item [routerLink]="'/drilling'"> Drilling </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style='margin-left: 20px;margin-right: 150px;'>
+                <router-outlet></router-outlet> 
+                <div class='gd-tabs'>
+                  <a class='gd-tab' mat-list-item [routerLink]="'/visualization/visualization-by-uri'"> Visualization By URI </a>
+                  <a class='gd-tab is-active' mat-list-item [routerLink]="'/visualization/visualization-by-identifier'"> Visualization By Identifier </a>
+                </div>
+                <div class='example-wrapper'>
+                    <div>
+                        <h1>Visualization by identifier</h1>
+                        <p>
+                          These are the examples of the generic Visualization component that uses identifier to identify insights.
+                        </p>
+                    </div>                    
+                    <h3>Area Chart</h3> 
+                    <app-visualization-area-chart></app-visualization-area-chart>
+
+                    <h3>Pivot Table</h3> 
+                    <app-visualization-pivot-table></app-visualization-pivot-table>
+
+                    <h3>Bar Chart</h3> 
+                    <app-visualization-bar-chart></app-visualization-bar-chart>
+
+                    <h3>Column Chart</h3> 
+                    <app-visualization-column-chart></app-visualization-column-chart>
+                    
+                    <h3>Line Chart</h3> 
+                    <app-visualization-line-chart></app-visualization-line-chart>
+
+                    <h3>Treemap</h3>
+                    <app-visualization-treemap-by-identifier></app-visualization-treemap-by-identifier>
+                    
+                    <h3>Heatmap</h3>
+                    <app-visualization-heatmap-by-identifier></app-visualization-heatmap-by-identifier>
+                    
+                    <h3>Pie Chart</h3>
+                    <app-visualization-pie-chart-by-identifier></app-visualization-pie-chart-by-identifier>
+                    
+                    <h3>Donut Chart</h3>
+                    <app-visualization-donut-chart-by-identifier></app-visualization-donut-chart-by-identifier>
+
+                    <h3>Bullet Chart</h3>
+                    <app-visualization-bullet-chart-by-identifier></app-visualization-bullet-chart-by-identifier>
+                    
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 
