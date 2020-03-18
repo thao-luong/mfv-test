@@ -19,24 +19,42 @@
             <div style='margin-left: 20px;margin-right: 150px;'>
                 <router-outlet></router-outlet> 
                 <div class='gd-tabs'>
-                  <a class='gd-tab is-active' mat-list-item [routerLink]="'/advanced/global-filters'"> Global Filters </a>
-                  <a class='gd-tab' mat-list-item [routerLink]="'/advanced/parent-filter'"> Parent Filter </a>
+                  <a class='gd-tab is-active' mat-list-item [routerLink]="'/visualization/visualization-by-uri'"> Visualization By URI </a>
+                  <a class='gd-tab' mat-list-item [routerLink]="'/visualization/visualization-by-identifier'"> Visualization By Identifier </a>
                 </div>
                 <div class='example-wrapper'>
                     <div>
-                        <h1>Global Filters</h1>
+                        <h1>Visualization by URI</h1>
                         <p>
-                            Here is how you can combine several components to apply a dynamic attribute filter to multiple
-                            display and GoodData.UI components.
-                        </p>
-                        <p>
-                            The AttributeElements component loads values of the Employee Name attribute. When you click an
-                            attribute value (employee) in the left pane, the KPIs, pie chart and bar chart are filtered by
-                            the selected attribute value (employee). In addition, employee information is passed into the
-                            EmployeeCard component that renders static data mixed with external data.
+                          These are the examples of the generic Visualization component that uses URI to identify insights.
                         </p>
                     </div>
-                    <app-global-filters-example></app-global-filters-example>
+                    <h3>Area Chart</h3> 
+                    <app-visualization-area-chart-by-uri></app-visualization-area-chart-by-uri>
+
+                    <h3>Stack Column Chart</h3> 
+                    <app-visualization-column-chart-by-uri></app-visualization-column-chart-by-uri>
+
+                    <h3>Line Chart</h3> 
+                    <app-visualization-line-chart-by-uri></app-visualization-line-chart-by-uri>
+
+                    <h3>Headline</h3>
+                    <app-visualization-headline-by-uri></app-visualization-headline-by-uri>
+
+                    <h3>Bubble Chart</h3>
+                    <app-visualization-bubble-chart-by-uri></app-visualization-bubble-chart-by-uri>
+                    
+                    <h3>Scatter Chart</h3>
+                    <app-visualization-scatter-chart-by-uri></app-visualization-scatter-chart-by-uri>
+                    
+                    <h3>Pie Chart</h3>
+                    <app-visualization-pie-chart-by-uri></app-visualization-pie-chart-by-uri>
+                    
+                    <h3>Donut Chart</h3>
+                    <app-visualization-donut-chart-by-uri></app-visualization-donut-chart-by-uri>
+
+                    <h3>Bullet Chart</h3>
+                    <app-visualization-bullet-chart-by-uri></app-visualization-bullet-chart-by-uri>
                 </div>
             </div>
         </mat-sidenav-content>

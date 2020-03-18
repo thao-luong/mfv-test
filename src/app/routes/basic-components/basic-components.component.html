@@ -5,7 +5,7 @@
         <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
             <a mat-list-item [routerLink]="'/'"> Basic Components </a>
             <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
-            <a mat-list-item [routerLink]="'/visualization'"> Visualization Component </a>
+            <a mat-list-item [routerLink]="'/visualization/visualization-by-uri'"> Visualization Component </a>
             <a mat-list-item [routerLink]="'/sorting'"> Sorting </a>
             <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
             <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter Component </a>
@@ -20,78 +20,90 @@
                 <router-outlet></router-outlet>               
                 <h2>Basic Components</h2>
                 <p>The following components accept measures and attributes, perform the execution, and render data as a chart, table or KPI.</p>
+                
                 <hr className="separator" />
-
                 <h3>KPI</h3>
                 <app-kpi></app-kpi>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Head Line</h3> 
                 <app-head-line></app-head-line>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Pie chart has 1 measure, 1 attribute</h3>
                 <app-pie-chart></app-pie-chart> 
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Table</h3> 
                 <app-table></app-table>
-                <hr className="separator" /> 
 
+                <hr className="separator" /> 
                 <h3>Bar chart has 1 measure, 1 viewBy</h3> 
                 <app-bar-chart></app-bar-chart> 
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Column chart has 1 measure, 1 viewBy ans sort by measure</h3> 
                 <app-column-chart></app-column-chart> 
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Line chart</h3> 
                 <app-line-chart></app-line-chart> 
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Line chart has 1 measures, 1 trendBy, 1 SegmentBy</h3> 
                 <app-line-chart-has-segment-by></app-line-chart-has-segment-by> 
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Area Chart has StackBy</h3> 
                 <app-area-chart></app-area-chart>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Area Chart has color palette</h3> 
                 <app-area-chart-has-color-palette></app-area-chart-has-color-palette>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Combo chart</h3> 
                 <app-combo-chart></app-combo-chart>
+                
                 <hr className="separator" />
-
                 <h3>Heat Map</h3> 
                 <app-heat-map></app-heat-map>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Tree Map</h3> 
                 <app-tree-map></app-tree-map>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Donut chart</h3> 
                 <app-donut-chart></app-donut-chart>
-                <hr className="separator" />
 
+                <hr className="separator" />                
                 <h3>Scatter Plot</h3> 
                 <app-scatter-plot></app-scatter-plot>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Bubble Chart</h3> 
                 <app-bubble-chart></app-bubble-chart>
-                <hr className="separator" />
 
+                <hr className="separator" />
                 <h3>Dual Axes Column Chart</h3> 
                 <app-dual-column-chart></app-dual-column-chart>
 
                 <hr className="separator" />
                 <h3>Pie Chart with color mapping</h3> 
-                <app-pie-chart-color-mapping></app-pie-chart-color-mapping>
+                <app-pie-chart-color-mapping></app-pie-chart-color-mapping> 
+
+                <hr className="separator" />
+                <h3>Bullet Chart</h3>
+                <app-bullet-chart></app-bullet-chart>
+                
+                <hr className="separator" />
+                <h3>Bullet Chart Has AM Measure, PoP measure and Drilling</h3>
+                <app-bullet-chart-has-am-measure></app-bullet-chart-has-am-measure>
+                
+                <hr className="separator" />
+                <h3>Bullet Chart has measure value filter</h3>
+                <app-bullet-chart-has-measure-value-filter></app-bullet-chart-has-measure-value-filter>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
