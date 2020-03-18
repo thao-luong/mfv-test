@@ -102,7 +102,9 @@ import { VisualizationComponent } from './routes/visualization-components/visual
 import { VisualizationBulletChartByIdentifierComponent } from './visualizations/visualization-bullet-chart-by-identifier/visualization-bullet-chart-by-identifier.component';
 import { BulletChartComponent } from './components/bullet-chart/bullet-chart.component';
 import { BulletChartHasAmMeasureComponent } from './components/bullet-chart-has-am-measure/bullet-chart-has-am-measure.component';
-import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-chart-has-measure-value-filter/bullet-chart-has-measure-value-filter.component'
+import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-chart-has-measure-value-filter/bullet-chart-has-measure-value-filter.component';
+import { ResponsiveExampleComponent } from './components/responsive-example/responsive-example.component';
+import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component'
 
 @NgModule({
     imports: [
@@ -206,7 +208,9 @@ import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-c
         VisualizationBulletChartByIdentifierComponent ,
         BulletChartComponent ,
         BulletChartHasAmMeasureComponent ,
-        BulletChartHasMeasureValueFilterComponent  
+        BulletChartHasMeasureValueFilterComponent,
+        ResponsiveExampleComponent,
+        ResponsiveChartComponent        
 
     ],
     providers: [
