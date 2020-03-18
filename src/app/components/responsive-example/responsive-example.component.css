@@ -1,0 +1,32 @@
+:hr.separator {
+    border: 1px solid #eee;
+    border-width: 1px 0 0 0;
+    margin: 20px 0;
+}
+
+.example-with-source {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 1070px;
+    height: 100%;
+}
+
+.example {
+    padding: 20px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+:global(.mainWrapper) {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 64px;
+}

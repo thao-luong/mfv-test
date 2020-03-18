@@ -16,6 +16,7 @@ import { GlobalFiltersComponent } from './routes/global-filters/global-filters.c
 import { ParentFilterComponent } from './routes/parent-filter/parent-filter.component';
 import { VisualizationByUriComponent } from './routes/visualization-by-uri/visualization-by-uri.component';
 import { VisualizationByIdentifierComponent } from './routes/visualization-by-identifier/visualization-by-identifier.component';
+import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     { path: 'date-filter-component', component: DateFilterComponent },
     { path: 'advanced/global-filters', component: GlobalFiltersComponent},
     { path: 'advanced/parent-filter', component: ParentFilterComponent},
+    { path: 'advanced/responsive', component: ResponsiveChartComponent},
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
