@@ -17,6 +17,7 @@ import { ParentFilterComponent } from './routes/parent-filter/parent-filter.comp
 import { VisualizationByUriComponent } from './routes/visualization-by-uri/visualization-by-uri.component';
 import { VisualizationByIdentifierComponent } from './routes/visualization-by-identifier/visualization-by-identifier.component';
 import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component';
+import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -34,9 +35,10 @@ const appRoutes: Routes = [
     { path: 'advanced/global-filters', component: GlobalFiltersComponent},
     { path: 'advanced/parent-filter', component: ParentFilterComponent},
     { path: 'advanced/responsive', component: ResponsiveChartComponent},
-
+    { path: 'advanced/save-as-kpi-dashboard', component: SaveAsDashboardComponentComponent},
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
+
 ];
 
 // export const routing = RouterModule.forRoot(appRoutes);

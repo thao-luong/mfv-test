@@ -96,3 +96,4 @@ export const bulletChartVisualizationByIdentifier = "aacCMlwkc9Wy";
 export const ownedSalesIdentifier = "aaMF7AZGbALB";
 export const dateYearIdentifier = "date.aag81lMifn6q";
 export const sameStoreSalesIdentifier = "aaXAnw7hcbFY";
+export const saveAsDashboard = `/gdc/md/${projectId}/obj/10255`;

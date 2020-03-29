@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>
-      if (global === undefined) {
-        var global = window;
-      }
-    </script>
-    <base href="/" />
-    <title>GoodData Live Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- bootstrap css -->
-    <style>
-      a { cursor: pointer };
-      /* .highcharts-container { overflow: visible !important};  */
-    </style>
-  </head>
-  <body>
-    <app>Loading...</app>
-  </body>
+<head>
+  <script>
+    if (global === undefined) {
+      var global = window;
+    }
+  </script>
+  <base href="/" />
+  <title>GoodData Live Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <style>
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    ;
+
+    .example-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex: 1 0 auto;
+    }
+
+    /* .highcharts-container { overflow: visible !important};  */
+  </style>
+</head>
+
+<body>
+  <app>Loading...</app>
+</body>
+
 </html>
