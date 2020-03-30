@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div style="margin-left: 100px;">
     <mat-sidenav-container style ="background-color: #fafafa;">
-        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa; padding-bottom: 25px;">
         <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
             <a mat-list-item [routerLink]="'/'"> Basic Components </a>
             <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
@@ -20,14 +20,21 @@
                 <router-outlet></router-outlet>               
                 <h2>Pivot Table</h2>
 
+                <hr class="separator"/>
                 <h3>Example of Presorted Pivot Table</h3> 
                 <app-pivot-table></app-pivot-table> 
 
+                <hr class="separator"/>
                 <h3>Example of Pivot Table has Totals, Group Totals, and Rows grouping</h3> 
-                <app-pivot-table-totals></app-pivot-table-totals> 
+                <app-pivot-table-totals></app-pivot-table-totals>
 
+                <hr class="separator"/>
                 <h3>Example of Drill Event</h3> 
                 <app-pivot-table-drill-example></app-pivot-table-drill-example> 
+
+                <hr class="separator"/>
+                <h3>Example of table column sizing</h3>
+                <app-pivot-table-sizing></app-pivot-table-sizing>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
