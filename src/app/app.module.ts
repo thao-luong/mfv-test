@@ -105,6 +105,8 @@ import { BulletChartHasAmMeasureComponent } from './components/bullet-chart-has-
 import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-chart-has-measure-value-filter/bullet-chart-has-measure-value-filter.component';
 import { ResponsiveExampleComponent } from './components/responsive-example/responsive-example.component';
 import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component'
+import { SaveAsDashboardComponent } from './components/save-as-dashboard/save-as-dashboard.component';
+import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component'
 
 @NgModule({
     imports: [
@@ -210,7 +212,9 @@ import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-c
         BulletChartHasAmMeasureComponent ,
         BulletChartHasMeasureValueFilterComponent,
         ResponsiveExampleComponent,
-        ResponsiveChartComponent        
+        ResponsiveChartComponent,
+        SaveAsDashboardComponent ,
+        SaveAsDashboardComponentComponent
 
     ],
     providers: [
