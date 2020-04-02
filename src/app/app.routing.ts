@@ -25,7 +25,7 @@ import { ExportHeadlineComponent } from './routes/export-headline/export-headlin
 import { ExportPivotTableComponent } from './routes/export-pivot-table/export-pivot-table.component';
 import { ExportTableComponent } from './routes/export-table/export-table.component';
 import { ExportVisualizationComponent } from './routes/export-visualization/export-visualization.component';
-
+import { DatepickerComponent } from './routes/datepicker/datepicker.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -51,6 +51,7 @@ const appRoutes: Routes = [
     { path: 'export/pivot-table', component: ExportPivotTableComponent},
     { path: 'export/table', component: ExportTableComponent},
     { path: 'export/visualization', component: ExportVisualizationComponent},
+    { path: 'advanced/date-picker', component: DatepickerComponent},
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 
