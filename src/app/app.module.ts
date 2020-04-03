@@ -104,10 +104,21 @@ import { BulletChartComponent } from './components/bullet-chart/bullet-chart.com
 import { BulletChartHasAmMeasureComponent } from './components/bullet-chart-has-am-measure/bullet-chart-has-am-measure.component';
 import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-chart-has-measure-value-filter/bullet-chart-has-measure-value-filter.component';
 import { ResponsiveExampleComponent } from './components/responsive-example/responsive-example.component';
-import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component'
 import { SaveAsDashboardComponent } from './components/save-as-dashboard/save-as-dashboard.component';
 import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
-import { PivotTableSizingComponent } from './components/pivot-table-sizing/pivot-table-sizing.component'
+import { PivotTableSizingComponent } from './components/pivot-table-sizing/pivot-table-sizing.component';
+import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component';
+import { MeasureValueFilterExamplesComponent } from './components/measure-value-filter-examples/measure-value-filter-examples.component';
+import { MeasureValueFilterComponent } from './routes/measure-value-filter/measure-value-filter.component';
+import { MeasureValueFilterShownInPercentComponent } from './components/measure-value-filter-shown-in-percent/measure-value-filter-shown-in-percent.component';
+import { MeasureValueFilterStackTo100PercentComponent } from './components/measure-value-filter-stack-to100-percent/measure-value-filter-stack-to100-percent.component';
+import { MeasureValueFilterFormattedInPercentComponent } from './components/measure-value-filter-formatted-in-percent/measure-value-filter-formatted-in-percent.component';
+import { FilterByMeasureValueComponent } from './routes/filter-by-measure-value/filter-by-measure-value.component';
+import { MeasureValueFilterComponentComponent } from './routes/measure-value-filter-component/measure-value-filter-component.component';
+import { MeasureValueFilterDropdownComponent } from './components/measure-value-filter-dropdown/measure-value-filter-dropdown.component';
+import { MeasureValueFilterRatioDropdownComponent } from './components/measure-value-filter-ratio-dropdown/measure-value-filter-ratio-dropdown.component';
+import { MeasureValueFilterPercentDropdownComponent } from './components/measure-value-filter-percent-dropdown/measure-value-filter-percent-dropdown.component'
+
 
 @NgModule({
     imports: [
@@ -216,8 +227,18 @@ import { PivotTableSizingComponent } from './components/pivot-table-sizing/pivot
         ResponsiveChartComponent,
         SaveAsDashboardComponent ,
         SaveAsDashboardComponentComponent,
-        PivotTableSizingComponent
-        
+        PivotTableSizingComponent,    
+        MeasureValueFilterExamplesComponent ,
+        MeasureValueFilterComponent,
+        MeasureValueFilterShownInPercentComponent,
+        MeasureValueFilterStackTo100PercentComponent,
+        MeasureValueFilterFormattedInPercentComponent,
+        FilterByMeasureValueComponent,
+        MeasureValueFilterComponentComponent,
+        MeasureValueFilterDropdownComponent,
+        MeasureValueFilterRatioDropdownComponent ,
+        MeasureValueFilterPercentDropdownComponent
+    
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

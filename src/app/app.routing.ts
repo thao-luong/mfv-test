@@ -18,6 +18,8 @@ import { VisualizationByUriComponent } from './routes/visualization-by-uri/visua
 import { VisualizationByIdentifierComponent } from './routes/visualization-by-identifier/visualization-by-identifier.component';
 import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component';
 import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
+import { MeasureValueFilterComponentComponent } from './routes/measure-value-filter-component/measure-value-filter-component.component';
+import { FilterByMeasureValueComponent } from './routes/filter-by-measure-value/filter-by-measure-value.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -30,6 +32,8 @@ const appRoutes: Routes = [
     { path: 'drilling', component: DrillingComponentsComponent },
     { path: 'visualization/visualization-by-uri', component: VisualizationByUriComponent },
     { path: 'visualization/visualization-by-identifier', component: VisualizationByIdentifierComponent },
+    { path: 'measure-value-filter/filter-by-measure-value', component: FilterByMeasureValueComponent },
+    { path: 'measure-value-filter/measure-value-filter-component', component: MeasureValueFilterComponentComponent },
     { path: 'arithmetic-measures', component: ArithmeticMeasureComponentsComponent },
     { path: 'date-filter-component', component: DateFilterComponent },
     { path: 'advanced/global-filters', component: GlobalFiltersComponent},

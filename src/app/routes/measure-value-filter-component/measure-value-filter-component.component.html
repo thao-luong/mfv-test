@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div style="margin-left: 100px;">
+    <mat-sidenav-container style ="background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+            <a mat-list-item [routerLink]="'/'"> Basic Components </a>
+            <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
+            <a mat-list-item [routerLink]="'/visualization/visualization-by-uri'"> Visualization Component </a>
+            <a mat-list-item [routerLink]="'/sorting'"> Sorting </a>
+            <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+            <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter Component </a>
+            <a mat-list-item [routerLink]="'/date-filter-component'"> Date Filter Component </a>
+            <a mat-list-item [routerLink]="'/arithmetic-measures'"> Arithmetic Measures </a>
+            <a mat-list-item [routerLink]="'/measure-value-filter/filter-by-measure-value'"> Measure Value Filter </a>
+            <a mat-list-item [routerLink]="'/advanced/global-filters'"> Advanced Use Cases </a>
+            <a mat-list-item [routerLink]="'/drilling'"> Drilling </a>           
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px;margin-right: 150px;">
+                <router-outlet></router-outlet>   
+                <div class='gd-tabs'>
+                  <a class='gd-tab' mat-list-item [routerLink]="'/measure-value-filter/filter-by-measure-value'"> Filter by Measure Value</a>
+                  <a class='gd-tab is-active' mat-list-item [routerLink]="'/measure-value-filter/measure-value-filter-component'"> Measure Value Filter Component </a>
+                </div> 
+                  <h2>Measure Value Filter Component</h2> 
+                  <p>This is a set of components for managing measure value filters.</p>
+                  <hr className="separator" />
+                  <h2>Dropdown</h2>
+                  <p>This example shows the dropdown component for setting up a measure value filter.</p>
+                  <app-measure-value-filter-dropdown></app-measure-value-filter-dropdown>
+                  <p>This example shows the dropdown component for setting up a measure value filter with a measure formatted as a percentage.</p>
+                  <app-measure-value-filter-ratio-dropdown></app-measure-value-filter-ratio-dropdown>
+                  <p>This example shows the dropdown component for setting up a measure value filter with a measure shown as a percentage.</p>                  
+                  <app-measure-value-filter-percent-dropdown></app-measure-value-filter-percent-dropdown>
+                </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 
+

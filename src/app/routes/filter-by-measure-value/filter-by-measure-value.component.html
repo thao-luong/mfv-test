@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div style="margin-left: 100px;">
+    <mat-sidenav-container style ="background-color: #fafafa;">
+        <mat-sidenav mode="side" opened style="border-right: solid 0px; background-color: #fafafa;">
+        <mat-nav-list style ="border: 1px solid #efe9e9; border-radius: 5px;margin: auto; background-color: #FFFFFF;">
+            <a mat-list-item [routerLink]="'/'"> Basic Components </a>
+            <a mat-list-item [routerLink]="'/pivot-table'"> Pivot Table </a>
+            <a mat-list-item [routerLink]="'/visualization/visualization-by-uri'"> Visualization Component </a>
+            <a mat-list-item [routerLink]="'/sorting'"> Sorting </a>
+            <a mat-list-item [routerLink]="'/time-over-time-comparison'"> Time Over Time Comparision </a>
+            <a mat-list-item [routerLink]="'/attribute-filter-components'"> Attribute Filter Component </a>
+            <a mat-list-item [routerLink]="'/date-filter-component'"> Date Filter Component </a>
+            <a mat-list-item [routerLink]="'/arithmetic-measures'"> Arithmetic Measures </a>
+            <a mat-list-item [routerLink]="'/measure-value-filter/filter-by-measure-value'"> Measure Value Filter </a>
+            <a mat-list-item [routerLink]="'/advanced/global-filters'"> Advanced Use Cases </a>
+            <a mat-list-item [routerLink]="'/drilling'"> Drilling </a>           
+        </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="margin-left: 20px;margin-right: 150px;">
+                <router-outlet></router-outlet>   
+                <div class='gd-tabs'>
+                  <a class='gd-tab is-active' mat-list-item [routerLink]="'/measure-value-filter/filter-by-measure-value'"> Filter by Measure Value</a>
+                  <a class='gd-tab' mat-list-item [routerLink]="'/measure-value-filter/measure-value-filter-component'"> Measure Value Filter Component </a>
+                </div>         
+              <div>
+                <h2>Filter by Measure Value</h2>
+                <p>Here is how you can filter the entire insight by the value of a measure. The granularity is defined by the attributes in the insight.</p>
+                <hr className="separator" />
+                <h3>Comparison and range filters</h3>
+                <p>This is the example of filtering the visualization by either one or two measure values:</p>
+                <app-measure-value-filter-examples></app-measure-value-filter-examples>
+                <h3>Filter by a measure value shown in %</h3> 
+                <p>When the visualization is filtered by a measure that is shown in %, the filter value is in the original measure scale and not in the percentage scale that is displayed in the visualization</p>
+                <app-measure-value-filter-shown-in-percent></app-measure-value-filter-shown-in-percent>
+                <h3>Filter by a measure value stacked to 100%
+                </h3>
+                <p>When the visualization is filtered by a measure that is stacked to 100%, the filter value is in the original measure scale and not in the percentage scale that is displayed in the visualization.
+                </p>
+                <app-measure-value-filter-stack-to100-percent></app-measure-value-filter-stack-to100-percent>
+                <h3>Filter a by measure value formatted in %
+                </h3>
+                <p>When the visualization is filtered by a measure that is formatted in %, the filter value is in the form of a ratio (for instance, 0.5, which is 50%) and not in the percentage scale. This applies to measures that have the percentage format set by the format measure property, calculated measures with the percentage format set in metadata catalog, and arithmetic measures with the change operator.
+                </p>
+                <app-measure-value-filter-formatted-in-percent></app-measure-value-filter-formatted-in-percent>
+              </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 
