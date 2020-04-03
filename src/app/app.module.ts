@@ -6,7 +6,6 @@ import { CookieService } from 'ngx-cookie-service';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
-
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { HeaderComponent } from './header/header.component';
@@ -117,7 +116,18 @@ import { FilterByMeasureValueComponent } from './routes/filter-by-measure-value/
 import { MeasureValueFilterComponentComponent } from './routes/measure-value-filter-component/measure-value-filter-component.component';
 import { MeasureValueFilterDropdownComponent } from './components/measure-value-filter-dropdown/measure-value-filter-dropdown.component';
 import { MeasureValueFilterRatioDropdownComponent } from './components/measure-value-filter-ratio-dropdown/measure-value-filter-ratio-dropdown.component';
-import { MeasureValueFilterPercentDropdownComponent } from './components/measure-value-filter-percent-dropdown/measure-value-filter-percent-dropdown.component'
+import { MeasureValueFilterPercentDropdownComponent } from './components/measure-value-filter-percent-dropdown/measure-value-filter-percent-dropdown.component';
+import { ExampleWithExportComponent } from './components/utils/example-with-export/example-with-export.component';
+import { PivotTableExportExampleComponent } from './components/pivot-table-export-example/pivot-table-export-example.component';
+import { HeadlineExportExampleComponent } from './components/headline-export-example/headline-export-example.component';
+import { VisualizationColumnChartExportExampleComponent } from './components/visualization-column-chart-export-example/visualization-column-chart-export-example.component';
+import { TableExportExampleComponent } from './components/table-export-example/table-export-example.component';
+import { BarChartExportExampleComponent } from './components/bar-chart-export-example/bar-chart-export-example.component';
+import { ExportChartComponent } from './routes/export-chart/export-chart.component';
+import { ExportHeadlineComponent } from './routes/export-headline/export-headline.component';
+import { ExportPivotTableComponent } from './routes/export-pivot-table/export-pivot-table.component';
+import { ExportTableComponent } from './routes/export-table/export-table.component';
+import { ExportVisualizationComponent } from './routes/export-visualization/export-visualization.component'
 
 
 @NgModule({
@@ -237,8 +247,19 @@ import { MeasureValueFilterPercentDropdownComponent } from './components/measure
         MeasureValueFilterComponentComponent,
         MeasureValueFilterDropdownComponent,
         MeasureValueFilterRatioDropdownComponent ,
-        MeasureValueFilterPercentDropdownComponent
-    
+        MeasureValueFilterPercentDropdownComponent,
+        ExampleWithExportComponent,
+        PivotTableExportExampleComponent ,
+        HeadlineExportExampleComponent ,
+        VisualizationColumnChartExportExampleComponent ,
+        TableExportExampleComponent ,
+        BarChartExportExampleComponent,
+        ExportChartComponent,
+        ExportHeadlineComponent,
+        ExportPivotTableComponent,
+        ExportTableComponent,
+        ExportVisualizationComponent
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

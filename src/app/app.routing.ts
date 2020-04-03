@@ -20,6 +20,12 @@ import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-c
 import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
 import { MeasureValueFilterComponentComponent } from './routes/measure-value-filter-component/measure-value-filter-component.component';
 import { FilterByMeasureValueComponent } from './routes/filter-by-measure-value/filter-by-measure-value.component';
+import { ExportChartComponent } from './routes/export-chart/export-chart.component';
+import { ExportHeadlineComponent } from './routes/export-headline/export-headline.component';
+import { ExportPivotTableComponent } from './routes/export-pivot-table/export-pivot-table.component';
+import { ExportTableComponent } from './routes/export-table/export-table.component';
+import { ExportVisualizationComponent } from './routes/export-visualization/export-visualization.component';
+
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -40,6 +46,11 @@ const appRoutes: Routes = [
     { path: 'advanced/parent-filter', component: ParentFilterComponent},
     { path: 'advanced/responsive', component: ResponsiveChartComponent},
     { path: 'advanced/save-as-kpi-dashboard', component: SaveAsDashboardComponentComponent},
+    { path: 'export/chart', component: ExportChartComponent},
+    { path: 'export/headline', component: ExportHeadlineComponent},
+    { path: 'export/pivot-table', component: ExportPivotTableComponent},
+    { path: 'export/table', component: ExportTableComponent},
+    { path: 'export/visualization', component: ExportVisualizationComponent},
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 
