@@ -106,7 +106,8 @@ import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-c
 import { ResponsiveExampleComponent } from './components/responsive-example/responsive-example.component';
 import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component'
 import { SaveAsDashboardComponent } from './components/save-as-dashboard/save-as-dashboard.component';
-import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component'
+import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
+import { PivotTableSizingComponent } from './components/pivot-table-sizing/pivot-table-sizing.component'
 
 @NgModule({
     imports: [
@@ -214,8 +215,9 @@ import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-co
         ResponsiveExampleComponent,
         ResponsiveChartComponent,
         SaveAsDashboardComponent ,
-        SaveAsDashboardComponentComponent
-
+        SaveAsDashboardComponentComponent,
+        PivotTableSizingComponent
+        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
