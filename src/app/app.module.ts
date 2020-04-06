@@ -103,10 +103,7 @@ import { BulletChartComponent } from './components/bullet-chart/bullet-chart.com
 import { BulletChartHasAmMeasureComponent } from './components/bullet-chart-has-am-measure/bullet-chart-has-am-measure.component';
 import { BulletChartHasMeasureValueFilterComponent } from './components/bullet-chart-has-measure-value-filter/bullet-chart-has-measure-value-filter.component';
 import { ResponsiveExampleComponent } from './components/responsive-example/responsive-example.component';
-import { SaveAsDashboardComponent } from './components/save-as-dashboard/save-as-dashboard.component';
-import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
 import { PivotTableSizingComponent } from './components/pivot-table-sizing/pivot-table-sizing.component';
-import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component';
 import { MeasureValueFilterExamplesComponent } from './components/measure-value-filter-examples/measure-value-filter-examples.component';
 import { MeasureValueFilterComponent } from './routes/measure-value-filter/measure-value-filter.component';
 import { MeasureValueFilterShownInPercentComponent } from './components/measure-value-filter-shown-in-percent/measure-value-filter-shown-in-percent.component';
@@ -128,7 +125,12 @@ import { ExportHeadlineComponent } from './routes/export-headline/export-headlin
 import { ExportPivotTableComponent } from './routes/export-pivot-table/export-pivot-table.component';
 import { ExportTableComponent } from './routes/export-table/export-table.component';
 import { ExportVisualizationComponent } from './routes/export-visualization/export-visualization.component'
-
+import { ResponsiveChartComponent } from './routes/responsive-chart/responsive-chart.component';
+import { SaveAsDashboardComponent } from './components/save-as-dashboard/save-as-dashboard.component';
+import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { MonthPickerComponent } from './components/month-picker/month-picker.component';
+import { DatepickerComponent } from './routes/datepicker/datepicker.component'
 
 @NgModule({
     imports: [
@@ -258,7 +260,10 @@ import { ExportVisualizationComponent } from './routes/export-visualization/expo
         ExportHeadlineComponent,
         ExportPivotTableComponent,
         ExportTableComponent,
-        ExportVisualizationComponent
+        ExportVisualizationComponent,
+        DatePickerComponent,
+        MonthPickerComponent,
+        DatepickerComponent
 
     ],
     providers: [
