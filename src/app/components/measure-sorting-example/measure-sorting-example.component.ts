@@ -11,7 +11,8 @@ import {
   locationResortIdentifier,
 } from "../../../utils/fixtures";
 
-interface MeasureSortingBucketProps {
+interface MeasureSortingProps {
+  projectId: any;
   measures: any[];
   viewBy?: any[];
   stackBy?: any;
@@ -19,25 +20,20 @@ interface MeasureSortingBucketProps {
   sortBy?: any[];
   config?: any;
 }
-interface MeasureSortingProps {
-  projectId: any;
-}
 
 @Component({
   selector: 'app-measure-sorting',
-  template: '<div class="measure-sorting" style="height:500px" [id]="rootDomID"></div>',
+  template: '<div class="measure-sorting" style="height:350px" [id]="rootDomID"></div>',
 })
+
 export class MeasureSortingExampleComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
-  @Input() filters: any[];
-  @Input() stackBy: any;
+  measures = [Model.measure(totalSalesIdentifier).format("#,##0").alias("$ Total Sales").localIdentifier(totalSalesIdentifier)]
 
-  xMeasures = [Model.measure(totalSalesIdentifier).format("#,##0").alias("$ Total Sales").localIdentifier(totalSalesIdentifier)]
+  viewBy = [Model.attribute(locationResortIdentifier).localIdentifier(locationResortIdentifier)]
 
-  xViewBy = [Model.attribute(locationResortIdentifier).localIdentifier(locationResortIdentifier)]
+  sortByMeasure = [Model.measureSortItem(totalSalesIdentifier, "desc")]
 
-  xSortByMeasure = [Model.measureSortItem(totalSalesIdentifier, "desc")]
-
-  xconfig = {
+  config = {
     colors: ['rgb(195, 49, 73)', 'rgb(168, 194, 86)', 'rgb(213, 214, 0)', 'rgb(65, 69, 195)'],
     dataLabels: {
       visible: 'auto'
@@ -61,21 +57,21 @@ export class MeasureSortingExampleComponent implements OnInit, OnDestroy, OnChan
     invariant(node, `Node '${this.rootDomID} not found!`);
     return node;
   }
-  protected getProps(): MeasureSortingProps | MeasureSortingBucketProps {
+
+  protected getProps(): MeasureSortingProps {
     return {
       projectId: projectId,
-      measures: this.xMeasures,
-      viewBy: this.xViewBy,
-      stackBy: this.stackBy,
-      filters: this.filters,
-      sortBy: this.xSortByMeasure,
-      config: this.xconfig
+      measures: this.measures,
+      viewBy: this.viewBy,
+      sortBy: this.sortByMeasure,
+      config: this.config
     };
   }
 
   private isMounted(): boolean {
     return !!this.rootDomID;
   }
+
   protected render() {
     if (this.isMounted()) {
       ReactDOM.render(React.createElement(ColumnChart, this.getProps()), this.getRootDomNode());
@@ -93,6 +89,7 @@ export class MeasureSortingExampleComponent implements OnInit, OnDestroy, OnChan
   ngAfterViewInit() {
     this.render();
   }
+
   ngOnDestroy() {
     // Uncomment if Angular 4 issue that ngOnDestroy is called AFTER DOM node removal is resolved
     // ReactDOM.unmountComponentAtNode(this.getRootDomNode())
