@@ -130,7 +130,8 @@ import { SaveAsDashboardComponent } from './components/save-as-dashboard/save-as
 import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-component/save-as-dashboard-component.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import { MonthPickerComponent } from './components/month-picker/month-picker.component';
-import { DatepickerComponent } from './routes/datepicker/datepicker.component'
+import { DatepickerComponent } from './routes/datepicker/datepicker.component';
+import { DynamicSortingComponent } from './components/dynamic-sorting/dynamic-sorting.component'
 
 @NgModule({
     imports: [
@@ -263,7 +264,8 @@ import { DatepickerComponent } from './routes/datepicker/datepicker.component'
         ExportVisualizationComponent,
         DatePickerComponent,
         MonthPickerComponent,
-        DatepickerComponent
+        DatepickerComponent,
+        DynamicSortingComponent
 
     ],
     providers: [

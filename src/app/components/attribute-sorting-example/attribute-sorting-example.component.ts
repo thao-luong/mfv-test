@@ -11,7 +11,8 @@ import {
   locationResortIdentifier,
 } from "../../../utils/fixtures";
 
-interface AttributeSortingBucketProps {
+interface AttributeSortingProps {
+  projectId: any;
   measures: any[];
   viewBy?: any[];
   stackBy?: any;
@@ -19,24 +20,17 @@ interface AttributeSortingBucketProps {
   sortBy?: any[];
   config?: any;
 }
-interface AttributeSortingProps {
-  projectId: any;
-}
 
 @Component({
   selector: 'app-attribute-sorting',
-  template: '<div class="attribute-sorting" style="height:500px" [id]="rootDomID"></div>',
+  template: '<div class="attribute-sorting" style="height:350px" [id]="attributeSortingDomID"></div>',
 })
+
 export class AttributeSortingExampleComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
-  @Input() filters: any[];
-  @Input() stackBy: any;
-
-  xMeasures = [Model.measure(totalSalesIdentifier).format("#,##0").alias("$ Total Sales").localIdentifier(totalSalesIdentifier)]
-
-  xViewBy = [Model.attribute(locationResortIdentifier).localIdentifier(locationResortIdentifier)]
-  xSortByAttribute = [Model.attributeSortItem(locationResortIdentifier, "desc")]
-
-  xconfig = {
+  measures = [Model.measure(totalSalesIdentifier).format("#,##0").alias("$ Total Sales").localIdentifier(totalSalesIdentifier)];
+  viewBy = [Model.attribute(locationResortIdentifier).localIdentifier(locationResortIdentifier)];
+  sortByAttribute = [Model.attributeSortItem(locationResortIdentifier, "desc")];
+  config = {
     colors: ['rgb(195, 49, 73)', 'rgb(168, 194, 86)', 'rgb(213, 214, 0)', 'rgb(65, 69, 195)'],
     dataLabels: {
       visible: 'auto'
@@ -51,38 +45,37 @@ export class AttributeSortingExampleComponent implements OnInit, OnDestroy, OnCh
     },
     stackMeasures: false,
     stackMeasuresToPercent: false,
-  }
-
-  public rootDomID: string;
+  };
+  public attributeSortingDomID: string;
 
   protected getRootDomNode() {
-    const node = document.getElementById(this.rootDomID);
-    invariant(node, `Node '${this.rootDomID} not found!`);
+    const node = document.getElementById(this.attributeSortingDomID);
+    invariant(node, `Node '${this.attributeSortingDomID} not found!`);
     return node;
   }
-  protected getProps(): AttributeSortingProps | AttributeSortingBucketProps {
+
+  protected getProps(): AttributeSortingProps {
     return {
       projectId: projectId,
-      measures: this.xMeasures,
-      viewBy: this.xViewBy,
-      stackBy: this.stackBy,
-      filters: this.filters,
-      sortBy: this.xSortByAttribute,
-      config: this.xconfig
+      measures: this.measures,
+      viewBy: this.viewBy,
+      sortBy: this.sortByAttribute,
+      config: this.config
     };
   }
 
   private isMounted(): boolean {
-    return !!this.rootDomID;
+    return !!this.attributeSortingDomID;
   }
+
   protected render() {
     if (this.isMounted()) {
       ReactDOM.render(React.createElement(ColumnChart, this.getProps()), this.getRootDomNode());
     }
-
   }
+
   ngOnInit() {
-    this.rootDomID = uuid.v1();
+    this.attributeSortingDomID = uuid.v1();
   }
 
   ngOnChanges() {
@@ -92,8 +85,10 @@ export class AttributeSortingExampleComponent implements OnInit, OnDestroy, OnCh
   ngAfterViewInit() {
     this.render();
   }
+
   ngOnDestroy() {
     // Uncomment if Angular 4 issue that ngOnDestroy is called AFTER DOM node removal is resolved
     // ReactDOM.unmountComponentAtNode(this.getRootDomNode())
   }
+
 }
