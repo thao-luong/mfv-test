@@ -131,7 +131,13 @@ import { SaveAsDashboardComponentComponent } from './routes/save-as-dashboard-co
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import { MonthPickerComponent } from './components/month-picker/month-picker.component';
 import { DatepickerComponent } from './routes/datepicker/datepicker.component';
-import { DynamicSortingComponent } from './components/dynamic-sorting/dynamic-sorting.component'
+import { DynamicSortingComponent } from './components/dynamic-sorting/dynamic-sorting.component';
+import { BarchartConfigComponent } from './components/barchart-config/barchart-config.component';
+import { DualAxisColumnChartComponent } from './components/dual-axis-column-chart/dual-axis-column-chart.component';
+import { DualAxisBarChartComponent } from './components/dual-axis-bar-chart/dual-axis-bar-chart.component';
+import { ColumnChartConfigComponent } from './components/column-chart-config/column-chart-config.component';
+import { PieChartWithColorMappingComponent } from './components/pie-chart-with-color-mapping/pie-chart-with-color-mapping.component';
+import { ChartConfigComponentsComponent } from './routes/chart-config-components/chart-config-components.component'
 
 @NgModule({
     imports: [
@@ -265,8 +271,14 @@ import { DynamicSortingComponent } from './components/dynamic-sorting/dynamic-so
         DatePickerComponent,
         MonthPickerComponent,
         DatepickerComponent,
-        DynamicSortingComponent
-
+        DynamicSortingComponent,
+        BarchartConfigComponent,
+        DualAxisColumnChartComponent,
+        DualAxisBarChartComponent,
+        ColumnChartConfigComponent,
+        PieChartWithColorMappingComponent,
+        ChartConfigComponentsComponent
+        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
