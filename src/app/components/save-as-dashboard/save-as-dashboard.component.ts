@@ -20,11 +20,12 @@ export class SaveAsDashboardComponent implements OnInit {
       { 
         copyKpi: false, 
         copyVisObj:false,
-        name: "New Dashboard" 
+        name: "New Dashboard" + new Date().toISOString()
       }
     );
     setTimeout(() => {
-      this.showMyMessage = true
+      this.showMyMessage = true,
+      this.loading = false
     }, 5000);
     this.autoCloseMessage();
   }

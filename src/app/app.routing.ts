@@ -26,6 +26,7 @@ import { ExportPivotTableComponent } from './routes/export-pivot-table/export-pi
 import { ExportTableComponent } from './routes/export-table/export-table.component';
 import { ExportVisualizationComponent } from './routes/export-visualization/export-visualization.component';
 import { DatepickerComponent } from './routes/datepicker/datepicker.component';
+import { ChartConfigComponentsComponent } from './routes/chart-config-components/chart-config-components.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -46,12 +47,14 @@ const appRoutes: Routes = [
     { path: 'advanced/parent-filter', component: ParentFilterComponent},
     { path: 'advanced/responsive', component: ResponsiveChartComponent},
     { path: 'advanced/save-as-kpi-dashboard', component: SaveAsDashboardComponentComponent},
+    { path: 'advanced/chart-config-components', component: ChartConfigComponentsComponent},
     { path: 'export/chart', component: ExportChartComponent},
     { path: 'export/headline', component: ExportHeadlineComponent},
     { path: 'export/pivot-table', component: ExportPivotTableComponent},
     { path: 'export/table', component: ExportTableComponent},
     { path: 'export/visualization', component: ExportVisualizationComponent},
     { path: 'advanced/date-picker', component: DatepickerComponent},
+
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 
